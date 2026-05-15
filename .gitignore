@@ -1,0 +1,5 @@
+dist/
+node_modules/
+.tmp/
+.github/update-summary.json
+.github/update-summary.md

@@ -1,0 +1,83 @@
+{
+  "name": "@thinkhuman/react-native-simple-icons",
+  "version": "16.19.0",
+  "description": "React Native components generated from simple-icons data.",
+  "type": "module",
+  "license": "MIT",
+  "author": "ThinkHuman",
+  "homepage": "https://github.com/ThinkHumanDotDev/react-native-simple-icons#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ThinkHumanDotDev/react-native-simple-icons.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ThinkHumanDotDev/react-native-simple-icons/issues"
+  },
+  "keywords": [
+    "react-native",
+    "expo",
+    "simple-icons",
+    "icons",
+    "svg",
+    "react-native-svg"
+  ],
+  "sideEffects": false,
+  "files": [
+    "assets",
+    "dist",
+    "src/simple-icons-manifest.json",
+    "LICENSE",
+    "NOTICE.md",
+    "README.md"
+  ],
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "react-native": "./dist/index.js",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "react-native": "./dist/index.js",
+      "import": "./dist/index.js",
+      "default": "./dist/index.js"
+    },
+    "./icons/*": {
+      "types": "./dist/icons/*.d.ts",
+      "react-native": "./dist/icons/*.js",
+      "import": "./dist/icons/*.js",
+      "default": "./dist/icons/*.js"
+    },
+    "./manifest": "./src/simple-icons-manifest.json",
+    "./package.json": "./package.json"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "generate:icons": "bun scripts/generate-icons.ts",
+    "classify:changes": "bun scripts/classify-changes.ts",
+    "build": "bun scripts/build-package.ts",
+    "smoke:react-native": "bun scripts/smoke-react-native.ts",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "validate": "bun run generate:icons && bun run typecheck && bun run build && bun run smoke:react-native && bun run test",
+    "prepublishOnly": "bun run validate && npm pack --dry-run"
+  },
+  "peerDependencies": {
+    "react": ">=18",
+    "react-native-svg": ">=13"
+  },
+  "devDependencies": {
+    "@react-native-community/cli": "^15.0.1",
+    "@react-native/metro-config": "0.76.9",
+    "@types/node": "^20.17.10",
+    "@types/react": "^18.3.18",
+    "react": "^18.3.1",
+    "react-native": "^0.76.5",
+    "react-native-svg": "^15.10.1",
+    "simple-icons": "16.19.0",
+    "typescript": "^5.7.2",
+    "vitest": "^2.1.8"
+  },
+  "packageManager": "bun@1.3.9"
+}

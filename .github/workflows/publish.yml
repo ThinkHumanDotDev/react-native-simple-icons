@@ -1,0 +1,91 @@
+name: Publish
+
+# Publishes when package.json version is new on npm after a push to main.
+#
+# Security (see TanStack May 2026 supply-chain postmortem):
+# - Only push / workflow_dispatch — never pull_request or pull_request_target
+# - github.repository guard so fork workflows cannot publish
+# - No actions/cache (no shared cache with untrusted PR jobs)
+# - Minimal permissions; checkout without persisting credentials
+# - npm environment must match the Trusted Publisher environment name on npm
+# - Publishes via npm Trusted Publisher (OIDC); no NPM_TOKEN secret
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+concurrency:
+  group: npm-publish
+  cancel-in-progress: false
+
+jobs:
+  check-version:
+    name: Check npm version
+    if: github.repository == 'ThinkHumanDotDev/react-native-simple-icons'
+    runs-on: ubuntu-latest
+    outputs:
+      publish: ${{ steps.npm.outputs.publish }}
+    permissions:
+      contents: read
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Compare package.json version to registry
+        id: npm
+        run: |
+          VERSION=$(node -p "require('./package.json').version")
+          PACKAGE=$(node -p "require('./package.json').name")
+          if npm view "${PACKAGE}@${VERSION}" version >/dev/null 2>&1; then
+            echo "publish=false" >> "$GITHUB_OUTPUT"
+            echo "Version ${VERSION} is already on npm; skipping publish."
+          else
+            echo "publish=true" >> "$GITHUB_OUTPUT"
+            echo "Version ${VERSION} is not on npm; will validate and publish."
+          fi
+
+  publish:
+    name: Publish to npm
+    needs: check-version
+    if: >-
+      github.repository == 'ThinkHumanDotDev/react-native-simple-icons' &&
+      needs.check-version.outputs.publish == 'true'
+    runs-on: ubuntu-latest
+    environment: npm
+    permissions:
+      contents: read
+      id-token: write
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+
+      - uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: 1.3.9
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          registry-url: https://registry.npmjs.org
+
+      - run: bun install --frozen-lockfile
+      - run: bun run generate:icons
+      - run: git diff --exit-code
+      - run: bun run typecheck
+      - run: bun run build
+      - run: bun run smoke:react-native
+      - run: bun run test
+      - run: npm pack --dry-run
+
+      - name: Publish to npm
+        run: npm publish --provenance --access public --ignore-scripts
