@@ -1,0 +1,28 @@
+import * as React from "react";
+import { Path, Svg } from "react-native-svg";
+import type { IconProps } from "../types.js";
+
+export const SiChinarailwayHex = "FF2600";
+export const SiChinarailwayTitle = "China Railway";
+export const SiChinarailwaySlug = "chinarailway";
+
+export function SiChinarailway({
+  size = 24,
+  color = "black",
+  title,
+  ...props
+}: IconProps): React.ReactElement {
+  const resolvedColor = color === "default" ? `#${SiChinarailwayHex}` : color;
+
+  return (
+    <Svg
+      width={size}
+      height={size}
+      viewBox="0 0 24 24"
+      accessibilityLabel={title ?? SiChinarailwayTitle}
+      {...props}
+    >
+      <Path fill={resolvedColor} d="M15.642 18.64a8.035 8.035 0 1 0-7.284 0l-1.476 1.932a10.435 10.435 0 0 1 3.136-19.339 1.043 1.043 0 0 1 .939-1.186 11.478 11.478 0 0 1 2.086 0 1.043 1.043 0 0 1 .939 1.186 10.435 10.435 0 0 1 3.136 19.339zm2.805 4.04a.417.417 0 0 1 .336.41V24H5.217v-.91a.417.417 0 0 1 .336-.41l4.438-.887a1.46 1.46 0 0 0 1.174-1.432v-5.934a1.043 1.043 0 0 0-.757-1.003l-2.06-.59V10.94a1.46 1.46 0 0 1 1.345-1.456 29.217 29.217 0 0 1 4.614 0 1.46 1.46 0 0 1 1.345 1.456v1.896l-2.06.589a1.043 1.043 0 0 0-.757 1.003v5.934a1.46 1.46 0 0 0 1.174 1.432z" />
+    </Svg>
+  );
+}

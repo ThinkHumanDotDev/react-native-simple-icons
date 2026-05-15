@@ -1,0 +1,28 @@
+import * as React from "react";
+import { Path, Svg } from "react-native-svg";
+import type { IconProps } from "../types.js";
+
+export const SiCommonworkflowlanguageHex = "B5314C";
+export const SiCommonworkflowlanguageTitle = "Common Workflow Language";
+export const SiCommonworkflowlanguageSlug = "commonworkflowlanguage";
+
+export function SiCommonworkflowlanguage({
+  size = 24,
+  color = "black",
+  title,
+  ...props
+}: IconProps): React.ReactElement {
+  const resolvedColor = color === "default" ? `#${SiCommonworkflowlanguageHex}` : color;
+
+  return (
+    <Svg
+      width={size}
+      height={size}
+      viewBox="0 0 24 24"
+      accessibilityLabel={title ?? SiCommonworkflowlanguageTitle}
+      {...props}
+    >
+      <Path fill={resolvedColor} d="M13.905 0L8.571 5.4l.037.037.096.096 3.586 3.395-2.24 2.252h-.01l-1.576 1.586 3.737 3.766-3.735 3.803.126.139v.012L12.052 24l1.608-1.64-1.98-2.034 3.737-3.79-1.608-1.642-.01.012-2.13-2.129 3.867-3.866-.017-.015.016-.016-3.641-3.524 3.64-3.694z" />
+    </Svg>
+  );
+}

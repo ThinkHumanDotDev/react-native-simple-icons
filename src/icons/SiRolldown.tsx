@@ -1,0 +1,28 @@
+import * as React from "react";
+import { Path, Svg } from "react-native-svg";
+import type { IconProps } from "../types.js";
+
+export const SiRolldownHex = "FF4100";
+export const SiRolldownTitle = "Rolldown";
+export const SiRolldownSlug = "rolldown";
+
+export function SiRolldown({
+  size = 24,
+  color = "black",
+  title,
+  ...props
+}: IconProps): React.ReactElement {
+  const resolvedColor = color === "default" ? `#${SiRolldownHex}` : color;
+
+  return (
+    <Svg
+      width={size}
+      height={size}
+      viewBox="0 0 24 24"
+      accessibilityLabel={title ?? SiRolldownTitle}
+      {...props}
+    >
+      <Path fill={resolvedColor} d="M21.652 0c.514 0 .796.6.466.998l-5.616 6.74c-.662.793-.098 1.997.934 1.997h5.433c.516 0 .797.6.467.998L12.467 23.775a.6.6 0 0 1-.468.225.6.6 0 0 1-.468-.225L.661 10.733a.609.609 0 0 1 .468-.998H6.56c1.032 0 1.595-1.204.937-1.997L1.88.998A.608.608 0 0 1 2.346 0Z" />
+    </Svg>
+  );
+}

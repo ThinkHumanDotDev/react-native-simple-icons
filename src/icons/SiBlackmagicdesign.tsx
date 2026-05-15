@@ -1,0 +1,28 @@
+import * as React from "react";
+import { Path, Svg } from "react-native-svg";
+import type { IconProps } from "../types.js";
+
+export const SiBlackmagicdesignHex = "FFA200";
+export const SiBlackmagicdesignTitle = "Blackmagic Design";
+export const SiBlackmagicdesignSlug = "blackmagicdesign";
+
+export function SiBlackmagicdesign({
+  size = 24,
+  color = "black",
+  title,
+  ...props
+}: IconProps): React.ReactElement {
+  const resolvedColor = color === "default" ? `#${SiBlackmagicdesignHex}` : color;
+
+  return (
+    <Svg
+      width={size}
+      height={size}
+      viewBox="0 0 24 24"
+      accessibilityLabel={title ?? SiBlackmagicdesignTitle}
+      {...props}
+    >
+      <Path fill={resolvedColor} d="M10.385 0c-1.15 0-2.076.93-2.076 2.076V5.31c0 1.148.929 2.076 2.076 2.076h3.23c1.15 0 2.076-.93 2.076-2.076V2.076A2.074 2.074 0 0 0 13.615 0h-3.23zm0 .924h3.23c.638 0 1.155.514 1.155 1.152V5.31c0 .638-.516 1.152-1.155 1.152h-3.23A1.152 1.152 0 0 1 9.23 5.309V2.076c0-.638.516-1.152 1.155-1.152zm0 7.385c-1.15 0-2.076.929-2.076 2.076v3.23c0 1.15.929 2.076 2.076 2.076h3.23c1.15 0 2.076-.929 2.076-2.076v-3.23c0-1.15-.929-2.076-2.076-2.076h-3.23zm0 .921h3.23c.638 0 1.155.516 1.155 1.155v3.23c0 .638-.516 1.155-1.155 1.155h-3.23a1.154 1.154 0 0 1-1.155-1.155v-3.23c0-.638.516-1.155 1.155-1.155zm0 7.385c-1.15 0-2.076.93-2.076 2.076v3.233c0 1.149.929 2.076 2.076 2.076h3.23c1.15 0 2.076-.93 2.076-2.076V18.69a2.075 2.075 0 0 0-2.076-2.076h-3.23zm0 .924h3.23c.638 0 1.155.514 1.155 1.152v3.233c0 .638-.516 1.152-1.155 1.152h-3.23a1.152 1.152 0 0 1-1.155-1.152V18.69c0-.638.516-1.152 1.155-1.152Z" />
+    </Svg>
+  );
+}

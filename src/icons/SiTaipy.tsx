@@ -1,0 +1,28 @@
+import * as React from "react";
+import { Path, Svg } from "react-native-svg";
+import type { IconProps } from "../types.js";
+
+export const SiTaipyHex = "FF371A";
+export const SiTaipyTitle = "Taipy";
+export const SiTaipySlug = "taipy";
+
+export function SiTaipy({
+  size = 24,
+  color = "black",
+  title,
+  ...props
+}: IconProps): React.ReactElement {
+  const resolvedColor = color === "default" ? `#${SiTaipyHex}` : color;
+
+  return (
+    <Svg
+      width={size}
+      height={size}
+      viewBox="0 0 24 24"
+      accessibilityLabel={title ?? SiTaipyTitle}
+      {...props}
+    >
+      <Path fill={resolvedColor} d="M1.273 4.153a.971.971 0 0 1 .917-.65h21.325a.486.486 0 0 1 .458.646l-1.245 3.56a.971.971 0 0 1-.917.65H.486a.486.486 0 0 1-.459-.646Zm4.855 6.07a.971.971 0 0 1 .917-.65h8.337a.486.486 0 0 1 .458.645l-1.245 3.56a.971.971 0 0 1-.917.65H5.341a.486.486 0 0 1-.458-.646Zm2.698 6.068a.971.971 0 0 1 .917-.65h3.482a.486.486 0 0 1 .458.646l-1.246 3.56a.971.971 0 0 1-.916.65H8.039a.486.486 0 0 1-.458-.646Z" />
+    </Svg>
+  );
+}

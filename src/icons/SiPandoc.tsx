@@ -1,0 +1,28 @@
+import * as React from "react";
+import { Path, Svg } from "react-native-svg";
+import type { IconProps } from "../types.js";
+
+export const SiPandocHex = "4093DA";
+export const SiPandocTitle = "Pandoc";
+export const SiPandocSlug = "pandoc";
+
+export function SiPandoc({
+  size = 24,
+  color = "black",
+  title,
+  ...props
+}: IconProps): React.ReactElement {
+  const resolvedColor = color === "default" ? `#${SiPandocHex}` : color;
+
+  return (
+    <Svg
+      width={size}
+      height={size}
+      viewBox="0 0 24 24"
+      accessibilityLabel={title ?? SiPandocTitle}
+      {...props}
+    >
+      <Path fill={resolvedColor} d="M4.259 0a.95.95 0 0 0-.925.837.74.74 0 0 0 .75.837h1.953L3.778 23.163a.74.74 0 0 0 .75.837.95.95 0 0 0 .924-.837l2.26-21.489h2.51Q9.095 12.419 7.964 23.163a.74.74 0 0 0 .75.837.95.95 0 0 0 .925-.837l.997-9.489h8.372a.95.95 0 0 0 .925-.837l.733-6.977a.76.76 0 0 0-.182-.591L15.988.245A.75.75 0 0 0 15.422 0Zm7.638 1.674H14.9l.06.068-.403 3.84a.494.494 0 0 0 .5.558h3.84l.06.067-.61 5.793h-7.534z" />
+    </Svg>
+  );
+}

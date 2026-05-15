@@ -1,0 +1,28 @@
+import * as React from "react";
+import { Path, Svg } from "react-native-svg";
+import type { IconProps } from "../types.js";
+
+export const SiAvmHex = "E2001A";
+export const SiAvmTitle = "AVM";
+export const SiAvmSlug = "avm";
+
+export function SiAvm({
+  size = 24,
+  color = "black",
+  title,
+  ...props
+}: IconProps): React.ReactElement {
+  const resolvedColor = color === "default" ? `#${SiAvmHex}` : color;
+
+  return (
+    <Svg
+      width={size}
+      height={size}
+      viewBox="0 0 24 24"
+      accessibilityLabel={title ?? SiAvmTitle}
+      {...props}
+    >
+      <Path fill={resolvedColor} d="m19.501 11.786-.003-4.823-10.9 11.925h3.172l5.481-6.07v4.864l4.321-4.783v3.657H24V6.86zm-2.643-6.675-5.267 5.87V7.443H9.345v9.38L20.049 5.111zM0 16.556h3.148l2.924-3.25v3.25H8.41v-9.21z" />
+    </Svg>
+  );
+}
