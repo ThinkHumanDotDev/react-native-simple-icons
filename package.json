@@ -1,6 +1,6 @@
 {
   "name": "@thinkhuman/react-native-simple-icons",
-  "version": "16.19.0",
+  "version": "16.30.0",
   "description": "React Native components generated from simple-icons data.",
   "type": "module",
   "license": "MIT",
@@ -75,7 +75,7 @@
     "react": "^18.3.1",
     "react-native": "^0.76.5",
     "react-native-svg": "^15.10.1",
-    "simple-icons": "16.19.0",
+    "simple-icons": "16.30.0",
     "typescript": "^5.7.2",
     "vitest": "^2.1.8"
   },

@@ -1,0 +1,28 @@
+import * as React from "react";
+import { Path, Svg } from "react-native-svg";
+import type { IconProps } from "../types.js";
+
+export const SiZxHex = "F11A7B";
+export const SiZxTitle = "zx";
+export const SiZxSlug = "zx";
+
+export function SiZx({
+  size = 24,
+  color = "black",
+  title,
+  ...props
+}: IconProps): React.ReactElement {
+  const resolvedColor = color === "default" ? `#${SiZxHex}` : color;
+
+  return (
+    <Svg
+      width={size}
+      height={size}
+      viewBox="0 0 24 24"
+      accessibilityLabel={title ?? SiZxTitle}
+      {...props}
+    >
+      <Path fill={resolvedColor} d="M22.036 18.327v5.673h-20.072v-5.673l6.152-6.56L2.4 5.673V0h19.156v5.673l-5.716 6.094 6.153 6.56h0.043Zm-10.058-10.677l1.855-1.977h-3.709l1.854 1.977Zm0 8.235l-2.291 2.442h4.582l-2.291-2.442Z" />
+    </Svg>
+  );
+}
