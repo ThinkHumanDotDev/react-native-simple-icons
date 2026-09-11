@@ -1,5 +1,6 @@
 name: Update icons
 
+# Touch to re-register workflow_dispatch / schedule triggers in GitHub Actions.
 on:
   schedule:
     - cron: "17 3 */3 * *"
@@ -14,15 +15,16 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
 
       - uses: oven-sh/setup-bun@v2
         with:
           bun-version: 1.3.9
 
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v7
         with:
-          node-version: 20
+          node-version: 24
+          package-manager-cache: false
 
       - run: bun install --frozen-lockfile
 
@@ -44,13 +46,15 @@ jobs:
 
       - name: Read processed version
         id: version
-        run: echo "version=$(node -p \"require('./src/simple-icons-manifest.json').simpleIconsVersion\")" >> "$GITHUB_OUTPUT"
+        run: |
+          VERSION=$(node -p "require('./src/simple-icons-manifest.json').simpleIconsVersion")
+          echo "version=${VERSION}" >> "$GITHUB_OUTPUT"
 
       - uses: peter-evans/create-pull-request@v6
         with:
           branch: chore/update-simple-icons
-          commit-message: chore: update simple-icons to v${{ steps.version.outputs.version }}
+          commit-message: "chore: update simple-icons to v${{ steps.version.outputs.version }}"
           delete-branch: true
           labels: dependencies
-          title: chore: update simple-icons to v${{ steps.version.outputs.version }}
+          title: "chore: update simple-icons to v${{ steps.version.outputs.version }}"
           body-path: .github/update-summary.md

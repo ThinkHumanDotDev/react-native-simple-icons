@@ -149,7 +149,7 @@ npm pack --dry-run
 
 ### Automated publish (GitHub Actions)
 
-Pushes to `main` on the upstream repo run [`.github/workflows/publish.yml`](.github/workflows/publish.yml) when `package.json` has a version that is not already on npm. Merging an icon update (or running `generate:icons` after bumping `simple-icons`) sets the version automatically; CI validates and publishes.
+Pushes to `main` on the upstream repo run [`.github/workflows/publish.yml`](.github/workflows/publish.yml) when `package.json` has a version that is not already on npm. Merging an icon update (or running `generate:icons` after bumping `simple-icons`) sets the version automatically; CI validates, publishes to npm, and creates a matching GitHub release (`v16.19.0`, etc.) with icon change notes.
 
 Forks cannot trigger a publish: the workflow checks `github.repository`, only runs on `push` to `main` (never on `pull_request` / `pull_request_target`), and does not use shared Actions caches.
 
