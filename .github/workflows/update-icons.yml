@@ -1,5 +1,6 @@
 name: Update icons
 
+# Touch to re-register workflow_dispatch / schedule triggers in GitHub Actions.
 on:
   schedule:
     - cron: "17 3 */3 * *"
@@ -49,8 +50,8 @@ jobs:
       - uses: peter-evans/create-pull-request@v6
         with:
           branch: chore/update-simple-icons
-          commit-message: chore: update simple-icons to v${{ steps.version.outputs.version }}
+          commit-message: "chore: update simple-icons to v${{ steps.version.outputs.version }}"
           delete-branch: true
           labels: dependencies
-          title: chore: update simple-icons to v${{ steps.version.outputs.version }}
+          title: "chore: update simple-icons to v${{ steps.version.outputs.version }}"
           body-path: .github/update-summary.md
