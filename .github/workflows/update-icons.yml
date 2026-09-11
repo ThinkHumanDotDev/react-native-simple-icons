@@ -45,7 +45,9 @@ jobs:
 
       - name: Read processed version
         id: version
-        run: echo "version=$(node -p \"require('./src/simple-icons-manifest.json').simpleIconsVersion\")" >> "$GITHUB_OUTPUT"
+        run: |
+          VERSION=$(node -p "require('./src/simple-icons-manifest.json').simpleIconsVersion")
+          echo "version=${VERSION}" >> "$GITHUB_OUTPUT"
 
       - uses: peter-evans/create-pull-request@v6
         with:
