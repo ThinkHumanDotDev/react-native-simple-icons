@@ -242,7 +242,6 @@ export { SiAtandt, SiAtandtHex, SiAtandtSlug, SiAtandtTitle } from "./icons/SiAt
 export { SiAtari, SiAtariHex, SiAtariSlug, SiAtariTitle } from "./icons/SiAtari.js";
 export { SiAtlasos, SiAtlasosHex, SiAtlasosSlug, SiAtlasosTitle } from "./icons/SiAtlasos.js";
 export { SiAtlassian, SiAtlassianHex, SiAtlassianSlug, SiAtlassianTitle } from "./icons/SiAtlassian.js";
-export { SiAtomgit, SiAtomgitHex, SiAtomgitSlug, SiAtomgitTitle } from "./icons/SiAtomgit.js";
 export { SiAuchan, SiAuchanHex, SiAuchanSlug, SiAuchanTitle } from "./icons/SiAuchan.js";
 export { SiAudacity, SiAudacityHex, SiAudacitySlug, SiAudacityTitle } from "./icons/SiAudacity.js";
 export { SiAudi, SiAudiHex, SiAudiSlug, SiAudiTitle } from "./icons/SiAudi.js";
@@ -2089,7 +2088,6 @@ export { SiOnlyfans, SiOnlyfansHex, SiOnlyfansSlug, SiOnlyfansTitle } from "./ic
 export { SiOnlyoffice, SiOnlyofficeHex, SiOnlyofficeSlug, SiOnlyofficeTitle } from "./icons/SiOnlyoffice.js";
 export { SiOnnx, SiOnnxHex, SiOnnxSlug, SiOnnxTitle } from "./icons/SiOnnx.js";
 export { SiOnstar, SiOnstarHex, SiOnstarSlug, SiOnstarTitle } from "./icons/SiOnstar.js";
-export { SiOomol, SiOomolHex, SiOomolSlug, SiOomolTitle } from "./icons/SiOomol.js";
 export { SiOpel, SiOpelHex, SiOpelSlug, SiOpelTitle } from "./icons/SiOpel.js";
 export { SiOpen3D, SiOpen3DHex, SiOpen3DSlug, SiOpen3DTitle } from "./icons/SiOpen3D.js";
 export { SiOpenaccess, SiOpenaccessHex, SiOpenaccessSlug, SiOpenaccessTitle } from "./icons/SiOpenaccess.js";

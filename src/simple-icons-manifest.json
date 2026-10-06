@@ -1,7 +1,7 @@
 {
-  "simpleIconsVersion": "16.30.0",
+  "simpleIconsVersion": "16.29.0",
   "componentApiHash": "6dc22d1820219f72f2f5a625c1f72349159eff5766d8884714f61688a25df1e7",
-  "count": 3459,
+  "count": 3457,
   "iconNames": [
     "Si1001Tracklists",
     "Si1And1",
@@ -246,7 +246,6 @@
     "SiAtari",
     "SiAtlasos",
     "SiAtlassian",
-    "SiAtomgit",
     "SiAuchan",
     "SiAudacity",
     "SiAudi",
@@ -2093,7 +2092,6 @@
     "SiOnlyoffice",
     "SiOnnx",
     "SiOnstar",
-    "SiOomol",
     "SiOpel",
     "SiOpen3D",
     "SiOpenaccess",
@@ -4921,12 +4919,6 @@
       "slug": "atlassian",
       "hex": "0052CC",
       "hash": "46771d6c6b25d763584ea556a9411f6c194f98564afa589d3cc7723991676088"
-    },
-    "SiAtomgit": {
-      "title": "AtomGit",
-      "slug": "atomgit",
-      "hex": "DA203E",
-      "hash": "bb47f349099435a489de3bccba4270f7080ad0ca7f363a51a4eb239e0204966b"
     },
     "SiAuchan": {
       "title": "Auchan",
@@ -16003,12 +15995,6 @@
       "slug": "onstar",
       "hex": "003D7D",
       "hash": "0e65f373cca49deb9adca450303b05982b7e7185d264a0638b0d8bb4ad31da4a"
-    },
-    "SiOomol": {
-      "title": "OOMOL",
-      "slug": "oomol",
-      "hex": "0D1117",
-      "hash": "7bb4f676633deb45ec25aca4e5c81ec2014ed9aec1422e06d31f427e0e7f2cae"
     },
     "SiOpel": {
       "title": "Opel",
