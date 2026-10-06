@@ -53,7 +53,7 @@ jobs:
       # PRs opened with the default GITHUB_TOKEN do not trigger CI, so the required status checks on
       # main would never report. Set the UPDATE_ICONS_TOKEN secret (fine-grained PAT or GitHub App token
       # with contents + pull-requests write) so the update PR runs CI like any other.
-      - uses: peter-evans/create-pull-request@v6
+      - uses: peter-evans/create-pull-request@v8
         with:
           token: ${{ secrets.UPDATE_ICONS_TOKEN || github.token }}
           branch: chore/update-simple-icons
