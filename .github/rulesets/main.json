@@ -36,7 +36,7 @@
         "strict_required_status_checks_policy": true,
         "do_not_enforce_on_create": false,
         "required_status_checks": [
-          { "context": "Validate", "integration_id": 15368 },
+          { "context": "validate", "integration_id": 15368 },
           { "context": "Conventional PR title", "integration_id": 15368 }
         ]
       }

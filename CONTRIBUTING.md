@@ -61,7 +61,7 @@ Use Bun (version in `package.json` → `packageManager`) and Node 24, the versio
 `main` is protected by the repository ruleset in [`.github/rulesets/main.json`](.github/rulesets/main.json):
 
 - changes land through pull requests only, squash-merged, with linear history;
-- the `Validate` and `Conventional PR title` checks must pass on a branch that is up to date with `main`;
+- the `validate` and `Conventional PR title` checks must pass on a branch that is up to date with `main`;
 - review threads must be resolved, and approvals are dismissed when new commits are pushed;
 - force pushes and deleting `main` are blocked;
 - repository admins may bypass the rules on a pull request (for example an urgent fix), never by pushing
