@@ -77,8 +77,8 @@ gh api --method POST repos/ThinkHumanDotDev/react-native-simple-icons/rulesets -
 gh api --method PUT repos/ThinkHumanDotDev/react-native-simple-icons/rulesets/<id> --input .github/rulesets/main.json
 ```
 
-Check names in the ruleset must match the job `name:` fields in [`ci.yml`](.github/workflows/ci.yml); rename
-them together. Under **Settings → General → Pull Requests**, allow squash merging only, default the commit
+Check names in the ruleset must match the job `name:` fields in [`ci.yml`](.github/workflows/ci.yml) and
+[`pr-title.yml`](.github/workflows/pr-title.yml); rename them together. Under **Settings → General → Pull Requests**, allow squash merging only, default the commit
 message to the PR title, and enable automatic deletion of head branches.
 
 Pull requests opened with the default `GITHUB_TOKEN` do not trigger other workflows, so the automated icon
