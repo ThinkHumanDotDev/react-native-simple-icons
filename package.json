@@ -1,7 +1,7 @@
 {
   "name": "@thinkhuman/react-native-simple-icons",
   "version": "16.30.0",
-  "description": "React Native components generated from simple-icons data.",
+  "description": "React Native Simple Icons: 3,400+ brand and logo icons from Simple Icons as typed React Native and Expo SVG components.",
   "type": "module",
   "license": "MIT",
   "author": "ThinkHuman",
@@ -15,11 +15,21 @@
   },
   "keywords": [
     "react-native",
-    "expo",
+    "react-native-simple-icons",
     "simple-icons",
+    "expo",
+    "expo-icons",
     "icons",
+    "brand-icons",
+    "brand-logos",
+    "logos",
+    "logo",
     "svg",
-    "react-native-svg"
+    "svg-icons",
+    "react-native-svg",
+    "react-native-icons",
+    "social-icons",
+    "typescript"
   ],
   "sideEffects": false,
   "files": [
