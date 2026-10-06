@@ -6,11 +6,13 @@
   </picture>
 </p>
 
-<h1 align="center">@thinkhuman/react-native-simple-icons</h1>
+<h1 align="center">React Native Simple Icons</h1>
 
 <p align="center">
-  React Native icon components generated from the upstream <a href="https://www.npmjs.com/package/simple-icons">simple-icons</a> package.
+  <a href="https://simpleicons.org">Simple Icons</a> for React Native and Expo: 3,400+ brand and logo icons as typed SVG components, updated automatically with every <a href="https://www.npmjs.com/package/simple-icons">simple-icons</a> release.
 </p>
+
+<p align="center"><code>@thinkhuman/react-native-simple-icons</code></p>
 
 <p align="center">
   <a href="https://www.npmjs.com/package/@thinkhuman/react-native-simple-icons"><img src="https://img.shields.io/npm/v/@thinkhuman/react-native-simple-icons.svg" alt="npm version"></a>
