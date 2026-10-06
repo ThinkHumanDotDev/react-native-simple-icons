@@ -14,6 +14,8 @@
 
 <p align="center"><code>@thinkhuman/react-native-simple-icons</code></p>
 
+<p align="center"><a href="https://thinkhumandotdev.github.io/react-native-simple-icons/"><strong>Browse all icons →</strong></a></p>
+
 <p align="center">
   <a href="https://www.npmjs.com/package/@thinkhuman/react-native-simple-icons"><img src="https://img.shields.io/npm/v/@thinkhuman/react-native-simple-icons.svg" alt="npm version"></a>
   <a href="https://github.com/ThinkHumanDotDev/react-native-simple-icons/actions/workflows/ci.yml"><img src="https://img.shields.io/github/actions/workflow/status/ThinkHumanDotDev/react-native-simple-icons/ci.yml?branch=main" alt="CI status"></a>
@@ -97,6 +99,10 @@ The npm package version matches the processed `simple-icons` version (for exampl
 `.github/workflows/update-icons.yml` runs every 3 days and can be started manually. It updates `simple-icons`, regenerates icons, classifies the changes, runs validation, and opens a PR when files changed.
 
 The update PR body includes the previous and new processed versions, added icons, removed icons, changed icons, suggested release type, and detected breaking changes.
+
+## Website
+
+The icon browser at <https://thinkhumandotdev.github.io/react-native-simple-icons/> is built from `site/` by `bun run build:site` into `_site/`, and `.github/workflows/pages.yml` deploys it to GitHub Pages on every push to `main`. Its layout is adapted from [simpleicons.org](https://github.com/simple-icons/simple-icons-website-rs) (CC0-1.0).
 
 ## Expanding on this project
 
