@@ -172,6 +172,8 @@ The publish job uses `environment: npm` and `id-token: write`; `actions/setup-no
 
 You can also run the workflow manually from the Actions tab (`workflow_dispatch`).
 
+The package mirrors every `simple-icons` release 1:1. The update workflow jumps straight to the newest release, so the same workflow also **backfills** any upstream version that never reached npm (for example when two releases land between update runs). After every publish it lists the skipped versions (`bun scripts/plan-backfill.ts`) from the first version this package published up to `main`, then builds, validates and publishes each one oldest first. Backfilled versions use the `backfill` dist-tag so `latest` never moves backwards, get a `v<version>` tag on a commit holding their generated sources, and a GitHub release that is not marked as latest. To backfill from an earlier version, run the workflow manually with `backfill_from` (for example `16.0.0`).
+
 When `simple-icons` releases a new version, use the update workflow or run the same steps locally:
 
 ```sh

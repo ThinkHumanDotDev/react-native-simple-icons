@@ -2,6 +2,7 @@ import { execFileSync } from "node:child_process";
 import { readFile, writeFile } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import { compareVersions, isReleaseVersion } from "./backfill-utils";
 import { classifyChanges, renderMarkdownSummary } from "./classify-utils";
 import type { Manifest } from "./icon-utils";
 
@@ -53,8 +54,12 @@ async function readPreviousManifest(version: string): Promise<Manifest> {
       .split("\n")
       .filter(Boolean);
 
-    const currentTag = `v${version}`;
-    previousTag = tags.find((tag) => tag !== currentTag);
+    // The newest tag below this version, so a backfilled release diffs against its predecessor
+    // rather than against a newer release that is already tagged.
+    previousTag = tags.find((tag) => {
+      const tagVersion = tag.slice(1);
+      return isReleaseVersion(tagVersion) && compareVersions(tagVersion, version) < 0;
+    });
   } catch {
     return empty;
   }
