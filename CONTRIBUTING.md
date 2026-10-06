@@ -1,8 +1,8 @@
 # Contributing to @thinkhuman/react-native-simple-icons
 
-Thanks for helping! Issues and pull requests are the unit of work. The [README](README.md) covers
-installation, the generator and the release automation; this page is the contributor workflow. By
-participating you agree to the [Code of Conduct](CODE_OF_CONDUCT.md).
+Thanks for helping! Issues and pull requests are the unit of work. The [README](README.md) covers using the
+package; this page covers developing and releasing it. By participating you agree to the
+[Code of Conduct](CODE_OF_CONDUCT.md).
 
 ## Icons come from simple-icons
 
@@ -35,6 +35,19 @@ bun run validate
 
 Use Bun (version in `package.json` → `packageManager`) and Node 24, the versions CI runs.
 
+| Command                      | What it does                                                                                       |
+| ---------------------------- | -------------------------------------------------------------------------------------------------- |
+| `bun run generate:icons`     | Writes `src/icons`, `src/index.ts` and `src/simple-icons-manifest.json` from the installed `simple-icons`, and sets the package version to match. |
+| `bun run typecheck`          | TypeScript check.                                                                                  |
+| `bun run build`              | Builds `dist` (not committed).                                                                     |
+| `bun run smoke:react-native` | Bundles the built package in a fresh React Native fixture through Metro, catching export and resolution problems a Node import misses. |
+| `bun run test`               | Vitest.                                                                                            |
+| `bun run validate`           | All of the above, in order.                                                                        |
+| `bun run classify:changes`   | Summarises added, removed and changed icons between two manifests.                                 |
+
+To try the package in an app, run `npm pack` after `bun run validate` and install the `.tgz` into a fresh Expo or
+React Native project; check both root imports and `/icons/<Name>` imports.
+
 ## Commit messages and PR titles
 
 [Conventional Commits](https://www.conventionalcommits.org): `type(scope): subject`.
@@ -55,6 +68,29 @@ Use Bun (version in `package.json` → `packageManager`) and Node 24, the versio
   generator; publishing happens automatically when a new version lands on `main`.
 - Tests: Vitest in `tests/` for behaviour that matters (generator output, change classification, icon
   utilities). No snapshot tests of every icon.
+
+## Releases (maintainers)
+
+Releases are automated; nothing is published by hand.
+
+- **Icon updates.** [`update-icons.yml`](.github/workflows/update-icons.yml) runs every 3 days (or manually),
+  updates `simple-icons` to the latest release, regenerates, validates and opens a PR whose body summarises the
+  icon changes. It needs the `UPDATE_ICONS_TOKEN` secret described below.
+- **Publishing.** [`publish.yml`](.github/workflows/publish.yml) runs on every push to `main`. When the
+  `package.json` version is not on npm yet, it validates, publishes with provenance and creates a `v<version>`
+  GitHub release with icon change notes. Forks cannot publish: the workflow checks `github.repository` and never
+  runs on pull requests.
+- **Backfill.** The package mirrors every `simple-icons` release 1:1, but the update workflow jumps straight to
+  the newest one. After each publish, the same workflow publishes any skipped upstream version (from the first
+  version on npm up to `main`) with the `backfill` dist-tag so `latest` never moves backwards, plus a tag and a
+  GitHub release not marked as latest. Versions are queued oldest first and run one at a time, but GitHub does
+  not guarantee matrix jobs run in the order they are queued. Run it manually with `backfill_from` (e.g.
+  `16.0.0`) to start earlier.
+
+Publishing uses [npm Trusted Publishing](https://docs.npmjs.com/trusted-publishers) (OIDC); there is no
+`NPM_TOKEN` secret. The trusted publisher on npm must match GitHub Actions, `ThinkHumanDotDev/react-native-simple-icons`,
+workflow `publish.yml` and environment `npm`; renaming the workflow file or the environment breaks publishing
+until npm is updated.
 
 ## Branch protection (maintainers)
 
