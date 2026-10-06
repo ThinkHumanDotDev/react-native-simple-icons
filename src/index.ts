@@ -89,7 +89,6 @@ export { SiAkiflow, SiAkiflowHex, SiAkiflowSlug, SiAkiflowTitle } from "./icons/
 export { SiAlacritty, SiAlacrittyHex, SiAlacrittySlug, SiAlacrittyTitle } from "./icons/SiAlacritty.js";
 export { SiAlamy, SiAlamyHex, SiAlamySlug, SiAlamyTitle } from "./icons/SiAlamy.js";
 export { SiAlbertheijn, SiAlbertheijnHex, SiAlbertheijnSlug, SiAlbertheijnTitle } from "./icons/SiAlbertheijn.js";
-export { SiAlbumoftheyear, SiAlbumoftheyearHex, SiAlbumoftheyearSlug, SiAlbumoftheyearTitle } from "./icons/SiAlbumoftheyear.js";
 export { SiAlby, SiAlbyHex, SiAlbySlug, SiAlbyTitle } from "./icons/SiAlby.js";
 export { SiAlchemy, SiAlchemyHex, SiAlchemySlug, SiAlchemyTitle } from "./icons/SiAlchemy.js";
 export { SiAldinord, SiAldinordHex, SiAldinordSlug, SiAldinordTitle } from "./icons/SiAldinord.js";
@@ -242,7 +241,6 @@ export { SiAtandt, SiAtandtHex, SiAtandtSlug, SiAtandtTitle } from "./icons/SiAt
 export { SiAtari, SiAtariHex, SiAtariSlug, SiAtariTitle } from "./icons/SiAtari.js";
 export { SiAtlasos, SiAtlasosHex, SiAtlasosSlug, SiAtlasosTitle } from "./icons/SiAtlasos.js";
 export { SiAtlassian, SiAtlassianHex, SiAtlassianSlug, SiAtlassianTitle } from "./icons/SiAtlassian.js";
-export { SiAtomgit, SiAtomgitHex, SiAtomgitSlug, SiAtomgitTitle } from "./icons/SiAtomgit.js";
 export { SiAuchan, SiAuchanHex, SiAuchanSlug, SiAuchanTitle } from "./icons/SiAuchan.js";
 export { SiAudacity, SiAudacityHex, SiAudacitySlug, SiAudacityTitle } from "./icons/SiAudacity.js";
 export { SiAudi, SiAudiHex, SiAudiSlug, SiAudiTitle } from "./icons/SiAudi.js";
@@ -2089,7 +2087,6 @@ export { SiOnlyfans, SiOnlyfansHex, SiOnlyfansSlug, SiOnlyfansTitle } from "./ic
 export { SiOnlyoffice, SiOnlyofficeHex, SiOnlyofficeSlug, SiOnlyofficeTitle } from "./icons/SiOnlyoffice.js";
 export { SiOnnx, SiOnnxHex, SiOnnxSlug, SiOnnxTitle } from "./icons/SiOnnx.js";
 export { SiOnstar, SiOnstarHex, SiOnstarSlug, SiOnstarTitle } from "./icons/SiOnstar.js";
-export { SiOomol, SiOomolHex, SiOomolSlug, SiOomolTitle } from "./icons/SiOomol.js";
 export { SiOpel, SiOpelHex, SiOpelSlug, SiOpelTitle } from "./icons/SiOpel.js";
 export { SiOpen3D, SiOpen3DHex, SiOpen3DSlug, SiOpen3DTitle } from "./icons/SiOpen3D.js";
 export { SiOpenaccess, SiOpenaccessHex, SiOpenaccessSlug, SiOpenaccessTitle } from "./icons/SiOpenaccess.js";
@@ -2717,7 +2714,6 @@ export { SiSimilarweb, SiSimilarwebHex, SiSimilarwebSlug, SiSimilarwebTitle } fr
 export { SiSimkl, SiSimklHex, SiSimklSlug, SiSimklTitle } from "./icons/SiSimkl.js";
 export { SiSimpleanalytics, SiSimpleanalyticsHex, SiSimpleanalyticsSlug, SiSimpleanalyticsTitle } from "./icons/SiSimpleanalytics.js";
 export { SiSimpleicons, SiSimpleiconsHex, SiSimpleiconsSlug, SiSimpleiconsTitle } from "./icons/SiSimpleicons.js";
-export { SiSimpleiconscdn, SiSimpleiconscdnHex, SiSimpleiconscdnSlug, SiSimpleiconscdnTitle } from "./icons/SiSimpleiconscdn.js";
 export { SiSimplelocalize, SiSimplelocalizeHex, SiSimplelocalizeSlug, SiSimplelocalizeTitle } from "./icons/SiSimplelocalize.js";
 export { SiSimplelogin, SiSimpleloginHex, SiSimpleloginSlug, SiSimpleloginTitle } from "./icons/SiSimplelogin.js";
 export { SiSimplenote, SiSimplenoteHex, SiSimplenoteSlug, SiSimplenoteTitle } from "./icons/SiSimplenote.js";
@@ -2971,7 +2967,6 @@ export { SiTelegraph, SiTelegraphHex, SiTelegraphSlug, SiTelegraphTitle } from "
 export { SiTelenor, SiTelenorHex, SiTelenorSlug, SiTelenorTitle } from "./icons/SiTelenor.js";
 export { SiTelequebec, SiTelequebecHex, SiTelequebecSlug, SiTelequebecTitle } from "./icons/SiTelequebec.js";
 export { SiTemporal, SiTemporalHex, SiTemporalSlug, SiTemporalTitle } from "./icons/SiTemporal.js";
-export { SiTencenthy, SiTencenthyHex, SiTencenthySlug, SiTencenthyTitle } from "./icons/SiTencenthy.js";
 export { SiTensorflow, SiTensorflowHex, SiTensorflowSlug, SiTensorflowTitle } from "./icons/SiTensorflow.js";
 export { SiTeradata, SiTeradataHex, SiTeradataSlug, SiTeradataTitle } from "./icons/SiTeradata.js";
 export { SiTeratail, SiTeratailHex, SiTeratailSlug, SiTeratailTitle } from "./icons/SiTeratail.js";
@@ -3067,7 +3062,6 @@ export { SiTplink, SiTplinkHex, SiTplinkSlug, SiTplinkTitle } from "./icons/SiTp
 export { SiTqdm, SiTqdmHex, SiTqdmSlug, SiTqdmTitle } from "./icons/SiTqdm.js";
 export { SiTraccar, SiTraccarHex, SiTraccarSlug, SiTraccarTitle } from "./icons/SiTraccar.js";
 export { SiTradingview, SiTradingviewHex, SiTradingviewSlug, SiTradingviewTitle } from "./icons/SiTradingview.js";
-export { SiTrae, SiTraeHex, SiTraeSlug, SiTraeTitle } from "./icons/SiTrae.js";
 export { SiTraefikmesh, SiTraefikmeshHex, SiTraefikmeshSlug, SiTraefikmeshTitle } from "./icons/SiTraefikmesh.js";
 export { SiTraefikproxy, SiTraefikproxyHex, SiTraefikproxySlug, SiTraefikproxyTitle } from "./icons/SiTraefikproxy.js";
 export { SiTrailforks, SiTrailforksHex, SiTrailforksSlug, SiTrailforksTitle } from "./icons/SiTrailforks.js";
@@ -3078,7 +3072,6 @@ export { SiTransmission, SiTransmissionHex, SiTransmissionSlug, SiTransmissionTi
 export { SiTransportforireland, SiTransportforirelandHex, SiTransportforirelandSlug, SiTransportforirelandTitle } from "./icons/SiTransportforireland.js";
 export { SiTransportforlondon, SiTransportforlondonHex, SiTransportforlondonSlug, SiTransportforlondonTitle } from "./icons/SiTransportforlondon.js";
 export { SiTravisci, SiTravisciHex, SiTravisciSlug, SiTravisciTitle } from "./icons/SiTravisci.js";
-export { SiTraxsource, SiTraxsourceHex, SiTraxsourceSlug, SiTraxsourceTitle } from "./icons/SiTraxsource.js";
 export { SiTreehouse, SiTreehouseHex, SiTreehouseSlug, SiTreehouseTitle } from "./icons/SiTreehouse.js";
 export { SiTrello, SiTrelloHex, SiTrelloSlug, SiTrelloTitle } from "./icons/SiTrello.js";
 export { SiTrendmicro, SiTrendmicroHex, SiTrendmicroSlug, SiTrendmicroTitle } from "./icons/SiTrendmicro.js";
@@ -3425,7 +3418,6 @@ export { SiZdf, SiZdfHex, SiZdfSlug, SiZdfTitle } from "./icons/SiZdf.js";
 export { SiZdotai, SiZdotaiHex, SiZdotaiSlug, SiZdotaiTitle } from "./icons/SiZdotai.js";
 export { SiZebpay, SiZebpayHex, SiZebpaySlug, SiZebpayTitle } from "./icons/SiZebpay.js";
 export { SiZebratechnologies, SiZebratechnologiesHex, SiZebratechnologiesSlug, SiZebratechnologiesTitle } from "./icons/SiZebratechnologies.js";
-export { SiZectrix, SiZectrixHex, SiZectrixSlug, SiZectrixTitle } from "./icons/SiZectrix.js";
 export { SiZedindustries, SiZedindustriesHex, SiZedindustriesSlug, SiZedindustriesTitle } from "./icons/SiZedindustries.js";
 export { SiZelle, SiZelleHex, SiZelleSlug, SiZelleTitle } from "./icons/SiZelle.js";
 export { SiZenbrowser, SiZenbrowserHex, SiZenbrowserSlug, SiZenbrowserTitle } from "./icons/SiZenbrowser.js";
@@ -3456,5 +3448,4 @@ export { SiZorin, SiZorinHex, SiZorinSlug, SiZorinTitle } from "./icons/SiZorin.
 export { SiZotero, SiZoteroHex, SiZoteroSlug, SiZoteroTitle } from "./icons/SiZotero.js";
 export { SiZsh, SiZshHex, SiZshSlug, SiZshTitle } from "./icons/SiZsh.js";
 export { SiZulip, SiZulipHex, SiZulipSlug, SiZulipTitle } from "./icons/SiZulip.js";
-export { SiZx, SiZxHex, SiZxSlug, SiZxTitle } from "./icons/SiZx.js";
 export { SiZyte, SiZyteHex, SiZyteSlug, SiZyteTitle } from "./icons/SiZyte.js";

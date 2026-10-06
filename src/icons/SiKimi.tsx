@@ -3,7 +3,7 @@ import { Path, Svg } from "react-native-svg";
 import type { IconProps } from "../types.js";
 
 export const SiKimiHex = "000000";
-export const SiKimiTitle = "Kimi";
+export const SiKimiTitle = "KIMI";
 export const SiKimiSlug = "kimi";
 
 export function SiKimi({
