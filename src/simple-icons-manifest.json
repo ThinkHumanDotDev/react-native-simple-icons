@@ -1,7 +1,7 @@
 {
-  "simpleIconsVersion": "16.30.0",
+  "simpleIconsVersion": "16.23.0",
   "componentApiHash": "6dc22d1820219f72f2f5a625c1f72349159eff5766d8884714f61688a25df1e7",
-  "count": 3459,
+  "count": 3442,
   "iconNames": [
     "Si1001Tracklists",
     "Si1And1",
@@ -93,7 +93,6 @@
     "SiAlacritty",
     "SiAlamy",
     "SiAlbertheijn",
-    "SiAlbumoftheyear",
     "SiAlby",
     "SiAlchemy",
     "SiAldinord",
@@ -246,7 +245,6 @@
     "SiAtari",
     "SiAtlasos",
     "SiAtlassian",
-    "SiAtomgit",
     "SiAuchan",
     "SiAudacity",
     "SiAudi",
@@ -568,7 +566,6 @@
     "SiCodacy",
     "SiCodeberg",
     "SiCodeblocks",
-    "SiCodebuddy",
     "SiCodecademy",
     "SiCodeceptjs",
     "SiCodechef",
@@ -963,7 +960,6 @@
     "SiFathom",
     "SiFauna",
     "SiFavro",
-    "SiFawry",
     "SiFcc",
     "SiFdroid",
     "SiFedex",
@@ -1136,7 +1132,6 @@
     "SiGitpod",
     "SiGitter",
     "SiGlance",
-    "SiGlass",
     "SiGlassdoor",
     "SiGldotinet",
     "SiGleam",
@@ -1574,7 +1569,6 @@
     "SiKick",
     "SiKickstarter",
     "SiKik",
-    "SiKimi",
     "SiKingstontechnology",
     "SiKinopoisk",
     "SiKinsta",
@@ -1843,7 +1837,6 @@
     "SiMermaid",
     "SiMessenger",
     "SiMeta",
-    "SiMetaai",
     "SiMetabase",
     "SiMetacritic",
     "SiMetafilter",
@@ -2093,7 +2086,6 @@
     "SiOnlyoffice",
     "SiOnnx",
     "SiOnstar",
-    "SiOomol",
     "SiOpel",
     "SiOpen3D",
     "SiOpenaccess",
@@ -2456,7 +2448,6 @@
     "SiRacket",
     "SiRadar",
     "SiRadarr",
-    "SiRadiantearth",
     "SiRadiofrance",
     "SiRadixui",
     "SiRadstudio",
@@ -2721,7 +2712,6 @@
     "SiSimkl",
     "SiSimpleanalytics",
     "SiSimpleicons",
-    "SiSimpleiconscdn",
     "SiSimplelocalize",
     "SiSimplelogin",
     "SiSimplenote",
@@ -2946,7 +2936,6 @@
     "SiTalos",
     "SiTamiya",
     "SiTampermonkey",
-    "SiTangled",
     "SiTanstack",
     "SiTaobao",
     "SiTapas",
@@ -2975,7 +2964,6 @@
     "SiTelenor",
     "SiTelequebec",
     "SiTemporal",
-    "SiTencenthy",
     "SiTensorflow",
     "SiTeradata",
     "SiTeratail",
@@ -3071,7 +3059,6 @@
     "SiTqdm",
     "SiTraccar",
     "SiTradingview",
-    "SiTrae",
     "SiTraefikmesh",
     "SiTraefikproxy",
     "SiTrailforks",
@@ -3082,7 +3069,6 @@
     "SiTransportforireland",
     "SiTransportforlondon",
     "SiTravisci",
-    "SiTraxsource",
     "SiTreehouse",
     "SiTrello",
     "SiTrendmicro",
@@ -3426,10 +3412,8 @@
     "SiZcash",
     "SiZcool",
     "SiZdf",
-    "SiZdotai",
     "SiZebpay",
     "SiZebratechnologies",
-    "SiZectrix",
     "SiZedindustries",
     "SiZelle",
     "SiZenbrowser",
@@ -3460,7 +3444,6 @@
     "SiZotero",
     "SiZsh",
     "SiZulip",
-    "SiZx",
     "SiZyte"
   ],
   "icons": {
@@ -4003,12 +3986,6 @@
       "slug": "albertheijn",
       "hex": "04ACE6",
       "hash": "de6bde8c5b3d06cb40e5290770b0fb7436c2ed5bc4e1a1b5d07d1bf152fa0ecd"
-    },
-    "SiAlbumoftheyear": {
-      "title": "Album of the Year",
-      "slug": "albumoftheyear",
-      "hex": "222222",
-      "hash": "d3a65862529256b7443e93df48a9e61303a2d8651d5f8741e5d5c8fbb6c16526"
     },
     "SiAlby": {
       "title": "Alby",
@@ -4921,12 +4898,6 @@
       "slug": "atlassian",
       "hex": "0052CC",
       "hash": "46771d6c6b25d763584ea556a9411f6c194f98564afa589d3cc7723991676088"
-    },
-    "SiAtomgit": {
-      "title": "AtomGit",
-      "slug": "atomgit",
-      "hex": "DA203E",
-      "hash": "bb47f349099435a489de3bccba4270f7080ad0ca7f363a51a4eb239e0204966b"
     },
     "SiAuchan": {
       "title": "Auchan",
@@ -6809,8 +6780,8 @@
     "SiCockpit": {
       "title": "Cockpit",
       "slug": "cockpit",
-      "hex": "2A7AE2",
-      "hash": "0ad161e15f617b89d2f23d886b5bec3f8d4e4c0682998b572f4ec53c8db4b498"
+      "hex": "0066CC",
+      "hash": "72d4d9bc5bbfe9b2ca2dbdb25d50f31cb177a41153e2e582238b6bdba4a11c7c"
     },
     "SiCockroachlabs": {
       "title": "Cockroach Labs",
@@ -6853,12 +6824,6 @@
       "slug": "codeblocks",
       "hex": "41AD48",
       "hash": "92115ca709da58a310ded362dae68f6ad09d4aae222151fbc760bf1755cc571d"
-    },
-    "SiCodebuddy": {
-      "title": "CodeBuddy",
-      "slug": "codebuddy",
-      "hex": "6C4DFF",
-      "hash": "f604b855cd2863763a9262947a47260567a35094c47fe451b37cf433b1646195"
     },
     "SiCodecademy": {
       "title": "Codecademy",
@@ -9047,8 +9012,8 @@
     "SiExpress": {
       "title": "Express",
       "slug": "express",
-      "hex": "0A0A0A",
-      "hash": "a5ff636f1ef37193b6b145abdb18f6a54d1b73363377082140c586c3b44663cc"
+      "hex": "000000",
+      "hash": "a11b90af06bcf3f31058f055bb2aee6ca50871be29aabb7b2d15e3168c1143c3"
     },
     "SiExpressdotcom": {
       "title": "Express.com",
@@ -9223,12 +9188,6 @@
       "slug": "favro",
       "hex": "512DA8",
       "hash": "d6b6d1857c899022205b27589378e7f609b728cde65be3e5bb86f40913866e42"
-    },
-    "SiFawry": {
-      "title": "Fawry",
-      "slug": "fawry",
-      "hex": "FFD300",
-      "hash": "b600d800846135f4fa474f0536e7c0586061082e390ca08fbbaf5b94e455f889"
     },
     "SiFcc": {
       "title": "FCC",
@@ -10261,12 +10220,6 @@
       "slug": "glance",
       "hex": "D9C38C",
       "hash": "6295f463b3be5d1a8a498e2a9193ce999b9097e0d77baa0d19b421fa76342dbb"
-    },
-    "SiGlass": {
-      "title": "Glass",
-      "slug": "glass",
-      "hex": "FFCC00",
-      "hash": "0330bbeddde0397e4fab90c65445957963f3211f44a652c57f5fc83c7d05f3de"
     },
     "SiGlassdoor": {
       "title": "Glassdoor",
@@ -12890,12 +12843,6 @@
       "hex": "82BC23",
       "hash": "607ad33b48c4d4893a6da643ad981f050c6476c7634e8b454a635f42cb72c264"
     },
-    "SiKimi": {
-      "title": "Kimi",
-      "slug": "kimi",
-      "hex": "000000",
-      "hash": "ded05a439c5a37100089fea22c4f398091b83155eac331a78b9e80ebb1ddbf8b"
-    },
     "SiKingstontechnology": {
       "title": "Kingston Technology",
       "slug": "kingstontechnology",
@@ -13764,7 +13711,7 @@
       "title": "LM Studio",
       "slug": "lmstudio",
       "hex": "000000",
-      "hash": "5eba243e5e3d1575d29ff8a79117d42579f2e047e65bf20b00bfcb60c6a2df21"
+      "hash": "9f6dcb88435a69e206cc4a9c3c0e5d97f7473695d43735dfa280b8d793d3343c"
     },
     "SiLobsters": {
       "title": "Lobsters",
@@ -14503,12 +14450,6 @@
       "slug": "meta",
       "hex": "0467DF",
       "hash": "8c72ab8b5ff47b762819d5de36589cd08d7f3000b968a592fa40edb4f569d1ab"
-    },
-    "SiMetaai": {
-      "title": "Meta AI",
-      "slug": "metaai",
-      "hex": "9844FF",
-      "hash": "086b3bfdfc9ea2a5cf6d1ca5361398a297a0b2f8db826df7ff92c5da7c37c6ee"
     },
     "SiMetabase": {
       "title": "Metabase",
@@ -16004,12 +15945,6 @@
       "hex": "003D7D",
       "hash": "0e65f373cca49deb9adca450303b05982b7e7185d264a0638b0d8bb4ad31da4a"
     },
-    "SiOomol": {
-      "title": "OOMOL",
-      "slug": "oomol",
-      "hex": "0D1117",
-      "hash": "7bb4f676633deb45ec25aca4e5c81ec2014ed9aec1422e06d31f427e0e7f2cae"
-    },
     "SiOpel": {
       "title": "Opel",
       "slug": "opel",
@@ -16698,7 +16633,7 @@
       "title": "Payload CMS",
       "slug": "payloadcms",
       "hex": "000000",
-      "hash": "8e4e909ea3fe8787cee4609be4efb31f79ae313f966616f686dd9abc8cccb04e"
+      "hash": "9574e82d436e2759c569889be308d4f95b91a4ca6779e8508af10bae4cc0c016"
     },
     "SiPayoneer": {
       "title": "Payoneer",
@@ -18181,12 +18116,6 @@
       "slug": "radarr",
       "hex": "FFCB3D",
       "hash": "c336915f7b8421d91fff822a195c52be61e41ba20e69a45ae10186bdc498c187"
-    },
-    "SiRadiantearth": {
-      "title": "Radiant Earth",
-      "slug": "radiantearth",
-      "hex": "469695",
-      "hash": "215bf026925eafea060ee4232792271fd3398941b0f21df23bf615074d564531"
     },
     "SiRadiofrance": {
       "title": "Radio France",
@@ -19691,8 +19620,8 @@
     "SiShortcut": {
       "title": "Shortcut",
       "slug": "shortcut",
-      "hex": "494BCB",
-      "hash": "0d6867aa7bdb52d083a8ab9aaf12d6425d109ac6fb018ace2e49b86e2e9d0949"
+      "hex": "58B1E4",
+      "hash": "628a46beee4c058526d01d1763e14fe1869696f662c17a1bbf97ee6fe06286c5"
     },
     "SiShowpad": {
       "title": "Showpad",
@@ -19771,12 +19700,6 @@
       "slug": "simpleicons",
       "hex": "111111",
       "hash": "0b47270af16c7947ee955d252dcd975db1a53f90cb1232fa8dcd103e7d61bf05"
-    },
-    "SiSimpleiconscdn": {
-      "title": "Simple Icons CDN",
-      "slug": "simpleiconscdn",
-      "hex": "111111",
-      "hash": "9d4a294ab7ae99c1081913a3b0c4838f377388405bb10d58e631f5696c38461e"
     },
     "SiSimplelocalize": {
       "title": "SimpleLocalize",
@@ -21122,17 +21045,11 @@
       "hex": "00485B",
       "hash": "4a85c0c4c2daeafd4230273ac4cf97db77ed1740927d7de71dcb8c81bb50bd72"
     },
-    "SiTangled": {
-      "title": "Tangled",
-      "slug": "tangled",
-      "hex": "000000",
-      "hash": "97eff74951eaadfe81431e2a7dbf574fbd1ac2375349ba5712b45773724fb25d"
-    },
     "SiTanstack": {
       "title": "TanStack",
       "slug": "tanstack",
-      "hex": "ECE8D1",
-      "hash": "b8fca2f76ae7a3d74f026b00153a19f8ef24572b0e0d1f895f86e3bfdc3e59c1"
+      "hex": "000000",
+      "hash": "0af2308d1fa165a21806f768901e0191fe93a4470a5c97379134898e5096a99e"
     },
     "SiTaobao": {
       "title": "Taobao",
@@ -21295,12 +21212,6 @@
       "slug": "temporal",
       "hex": "000000",
       "hash": "b536f6c227d1c43883ae959fefc560aa82c378f7bab2f43d1e9d3265949a5232"
-    },
-    "SiTencenthy": {
-      "title": "Tencent Hy",
-      "slug": "tencenthy",
-      "hex": "0052D9",
-      "hash": "a258b51db96a5161465da31629b8491274866e236a28397c642bf7f55b698e95"
     },
     "SiTensorflow": {
       "title": "TensorFlow",
@@ -21546,7 +21457,7 @@
       "title": "Threads",
       "slug": "threads",
       "hex": "000000",
-      "hash": "49dd7a459f09b13f09c0d80e91b4c504fb4dd99400d5e7cce154c2f9b0746c50"
+      "hash": "ceea8a4356bb5d0647d7c8aaf2bf7a3bafb10c9aa864344b4b8d7001cd571ff5"
     },
     "SiThreedotjs": {
       "title": "Three.js",
@@ -21872,12 +21783,6 @@
       "hex": "131622",
       "hash": "d61e02417ff85906cefe6108ca58a2308599dfc7039c564d11b7e20a843f324f"
     },
-    "SiTrae": {
-      "title": "TRAE",
-      "slug": "trae",
-      "hex": "32F08C",
-      "hash": "974262e58d658d1eaf986f00a988fb74bc75548891bf7d984c490232006d35ea"
-    },
     "SiTraefikmesh": {
       "title": "Traefik Mesh",
       "slug": "traefikmesh",
@@ -21937,12 +21842,6 @@
       "slug": "travisci",
       "hex": "3EAAAF",
       "hash": "df557944221216f5829ed29acad2683e71a1f461e1df6f798b68644bd59a5f57"
-    },
-    "SiTraxsource": {
-      "title": "Traxsource",
-      "slug": "traxsource",
-      "hex": "40A0FF",
-      "hash": "bf332fe95a07c067ba1b64178c1f87f6907babee34c6a1fa5b9ec582db0e05df"
     },
     "SiTreehouse": {
       "title": "Treehouse",
@@ -24002,12 +23901,6 @@
       "hex": "FA7D19",
       "hash": "416dbbe4cdfca5a83b00eb06e502d9234059c5a17a8cefcd322024158a141c2e"
     },
-    "SiZdotai": {
-      "title": "Z.ai",
-      "slug": "zdotai",
-      "hex": "2D2D2D",
-      "hash": "6571679dd8c4bab53e20cc58723f8457a9fb6ffa8ab5eed5abb56f14209f6d27"
-    },
     "SiZebpay": {
       "title": "ZebPay",
       "slug": "zebpay",
@@ -24019,12 +23912,6 @@
       "slug": "zebratechnologies",
       "hex": "000000",
       "hash": "ce4f44e58f50f512a02285bf83341a819d441e55e56c056b196a424f3d38a438"
-    },
-    "SiZectrix": {
-      "title": "ZecTrix",
-      "slug": "zectrix",
-      "hex": "000000",
-      "hash": "f477c4645363a4de8410f4abd9841c941074826c88c8fa58347d4a8704e765a4"
     },
     "SiZedindustries": {
       "title": "Zed Industries",
@@ -24205,12 +24092,6 @@
       "slug": "zulip",
       "hex": "6492FE",
       "hash": "5bdb443b43f14c41878196ca0dbfb8e951d2b7300cd270ecc7796271f207e0bc"
-    },
-    "SiZx": {
-      "title": "zx",
-      "slug": "zx",
-      "hex": "F11A7B",
-      "hash": "f8256a0981868902440ae356a81d608ac516d44cb85e3f3b9ca0d2b24b8c2e0f"
     },
     "SiZyte": {
       "title": "Zyte",
