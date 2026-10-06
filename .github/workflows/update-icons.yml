@@ -50,7 +50,7 @@ jobs:
           VERSION=$(node -p "require('./src/simple-icons-manifest.json').simpleIconsVersion")
           echo "version=${VERSION}" >> "$GITHUB_OUTPUT"
 
-      - uses: peter-evans/create-pull-request@v6
+      - uses: peter-evans/create-pull-request@v8
         with:
           branch: chore/update-simple-icons
           commit-message: "chore: update simple-icons to v${{ steps.version.outputs.version }}"
