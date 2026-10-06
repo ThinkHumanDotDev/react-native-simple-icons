@@ -1,0 +1,59 @@
+name: Feature request
+description: Propose a change to the component API, generated output, packaging or tooling
+title: 'feat: '
+labels: ['enhancement']
+body:
+  - type: markdown
+    attributes:
+      value: |
+        New icons are not feature requests: they come from
+        [simple-icons](https://github.com/simple-icons/simple-icons) and land here automatically.
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: What are you trying to do, and what gets in the way today?
+    validations:
+      required: true
+  - type: textarea
+    id: goal
+    attributes:
+      label: Proposed solution
+      description: What should the package do? Show the API you would like to write, if relevant.
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance criteria
+      description: Bullet list of verifiable outcomes.
+      placeholder: |
+        - Icons accept …
+        - Works with root and per-icon imports
+        - No breaking change to `IconProps`
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      multiple: true
+      options:
+        - component API / props
+        - generator / generated output
+        - packaging / exports / bundlers
+        - TypeScript types
+        - update automation / releases
+        - documentation
+        - other
+  - type: textarea
+    id: notes
+    attributes:
+      label: References and alternatives
+      description: Similar packages, files involved, constraints, alternatives considered.
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Checks
+      options:
+        - label: I searched existing issues for this request.
+          required: true
+        - label: I am willing to open a pull request for this.

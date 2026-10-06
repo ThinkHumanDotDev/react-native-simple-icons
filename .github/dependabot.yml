@@ -1,0 +1,23 @@
+version: 2
+updates:
+  - package-ecosystem: npm
+    directory: /
+    schedule:
+      interval: weekly
+    open-pull-requests-limit: 5
+    ignore:
+      # Updated every 3 days by .github/workflows/update-icons.yml, which also regenerates the icons
+      # and bumps the package version. A Dependabot bump alone would fail CI's generate diff check.
+      - dependency-name: simple-icons
+    groups:
+      react-native:
+        patterns: ['react', 'react-native', 'react-native-svg', '@react-native/*', '@react-native-community/*', '@types/react']
+      minor-and-patch:
+        update-types: ['minor', 'patch']
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: weekly
+    groups:
+      actions:
+        patterns: ['*']

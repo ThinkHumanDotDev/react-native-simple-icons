@@ -5,9 +5,20 @@ on:
   push:
     branches:
       - main
+  workflow_dispatch:
 
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+# Job names are required status checks in .github/rulesets/main.json; rename them together.
+# The PR title check lives in pr-title.yml so editing a title does not re-run (or cancel) validate.
 jobs:
   validate:
+    name: validate
     runs-on: ubuntu-latest
 
     steps:

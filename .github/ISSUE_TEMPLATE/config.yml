@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Missing, outdated or wrong icon
+    url: https://github.com/simple-icons/simple-icons/issues/new/choose
+    about: Icons are generated from simple-icons. Request new icons and fix artwork, colors or titles upstream; they arrive here on the next automated update.
+  - name: Security vulnerability
+    url: https://github.com/ThinkHumanDotDev/react-native-simple-icons/security/advisories/new
+    about: Report vulnerabilities privately through a security advisory, never in a public issue.

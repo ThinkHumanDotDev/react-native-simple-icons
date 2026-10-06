@@ -1,0 +1,97 @@
+name: Bug report
+description: A component renders wrongly, fails to import or bundle, or behaves differently from the README
+title: 'bug: '
+labels: ['bug']
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for the report. Please search existing issues first. Problems with the icon artwork itself
+        (shape, brand color, title) belong in [simple-icons](https://github.com/simple-icons/simple-icons/issues);
+        do **not** report security vulnerabilities here, use the private process in `SECURITY.md`.
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened?
+      description: What did you do, what did you see? Include the exact error message or a screenshot.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What did you expect?
+    validations:
+      required: true
+  - type: textarea
+    id: repro
+    attributes:
+      label: Minimal reproduction
+      description: The smallest component or snippet that shows the problem, or a link to a repo / Expo Snack.
+      render: tsx
+      placeholder: |
+        import { SiReact } from "@thinkhuman/react-native-simple-icons";
+
+        export function Example() {
+          return <SiReact size={32} color="default" />;
+        }
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Package version
+      description: Version of `@thinkhuman/react-native-simple-icons` (`npm ls @thinkhuman/react-native-simple-icons`).
+      placeholder: 16.30.0
+    validations:
+      required: true
+  - type: input
+    id: rn
+    attributes:
+      label: React Native, react-native-svg and Expo SDK versions
+      placeholder: react-native 0.76.5, react-native-svg 15.10.1, Expo SDK 52 (or bare)
+    validations:
+      required: true
+  - type: dropdown
+    id: platform
+    attributes:
+      label: Platform
+      multiple: true
+      options:
+        - iOS
+        - Android
+        - Web (react-native-web)
+        - Other
+    validations:
+      required: true
+  - type: dropdown
+    id: import
+    attributes:
+      label: Import style
+      options:
+        - Root import (`@thinkhuman/react-native-simple-icons`)
+        - Per-icon import (`@thinkhuman/react-native-simple-icons/icons/SiName`)
+        - Both
+  - type: dropdown
+    id: bundler
+    attributes:
+      label: Bundler
+      options:
+        - Metro
+        - Webpack / Rspack
+        - Vite
+        - Other
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs
+      description: Relevant bundler, Metro or runtime output.
+      render: shell
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Checks
+      options:
+        - label: I searched existing issues and this is not a duplicate.
+          required: true
+        - label: This is not a problem with the icon artwork, color or title (those go to simple-icons).
+          required: true

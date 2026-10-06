@@ -183,6 +183,10 @@ bun run validate
 
 Commit generated icon updates separately from tooling or documentation changes when possible. A typical update commit only changes `bun.lock`, `package.json`, `src/icons`, `src/index.ts`, and `src/simple-icons-manifest.json`.
 
+## Contributing
+
+Bug reports and pull requests are welcome; read [CONTRIBUTING.md](CONTRIBUTING.md) first. Missing or outdated icons are fixed upstream in [simple-icons](https://github.com/simple-icons/simple-icons). Report vulnerabilities privately as described in [SECURITY.md](SECURITY.md).
+
 ## License
 
 This package is MIT licensed. Icon data is generated from `simple-icons`, which is CC0-1.0.
