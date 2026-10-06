@@ -1,5 +1,9 @@
 <p align="center">
-  <img src="./assets/simple-icons.svg" width="90" height="80" alt="Simple Icons">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="./assets/simple-icons-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="./assets/simple-icons.svg">
+    <img src="./assets/simple-icons.svg" width="90" height="80" alt="Simple Icons">
+  </picture>
 </p>
 
 <h1 align="center">@thinkhuman/react-native-simple-icons</h1>
