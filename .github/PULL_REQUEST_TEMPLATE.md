@@ -14,5 +14,5 @@ Closes #
 - [ ] `bun run validate` passes locally (generate, typecheck, build, React Native smoke bundle, tests)
 - [ ] `bun run generate:icons` leaves no diff (generated files are committed and not edited by hand)
 - [ ] Generator or component changes: tests updated in `tests/`
-- [ ] README updated when the API, scripts or workflows changed
+- [ ] README (usage) or CONTRIBUTING (development, releases) updated when the API, scripts or workflows changed
 - [ ] No hand-made version bump: the package version follows the processed `simple-icons` version
