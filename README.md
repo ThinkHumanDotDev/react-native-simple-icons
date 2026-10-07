@@ -14,6 +14,8 @@
 
 <p align="center"><code>@thinkhuman/react-native-simple-icons</code></p>
 
+<p align="center"><a href="https://thinkhumandotdev.github.io/react-native-simple-icons/"><strong>Browse all icons →</strong></a></p>
+
 <p align="center">
   <a href="https://www.npmjs.com/package/@thinkhuman/react-native-simple-icons"><img src="https://img.shields.io/npm/v/@thinkhuman/react-native-simple-icons.svg" alt="npm version"></a>
   <a href="https://github.com/ThinkHumanDotDev/react-native-simple-icons/actions/workflows/ci.yml"><img src="https://img.shields.io/github/actions/workflow/status/ThinkHumanDotDev/react-native-simple-icons/ci.yml?branch=main" alt="CI status"></a>

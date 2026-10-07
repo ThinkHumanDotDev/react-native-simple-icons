@@ -5,7 +5,7 @@
   "type": "module",
   "license": "MIT",
   "author": "ThinkHuman",
-  "homepage": "https://github.com/ThinkHumanDotDev/react-native-simple-icons#readme",
+  "homepage": "https://thinkhumandotdev.github.io/react-native-simple-icons/",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ThinkHumanDotDev/react-native-simple-icons.git"
@@ -67,6 +67,7 @@
     "generate:icons": "bun scripts/generate-icons.ts",
     "classify:changes": "bun scripts/classify-changes.ts",
     "build": "bun scripts/build-package.ts",
+    "build:site": "bun scripts/build-site.ts",
     "smoke:react-native": "bun scripts/smoke-react-native.ts",
     "typecheck": "tsc --noEmit",
     "test": "vitest run",

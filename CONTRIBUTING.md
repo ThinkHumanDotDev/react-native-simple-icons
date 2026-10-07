@@ -44,6 +44,7 @@ Use Bun (version in `package.json` → `packageManager`) and Node 24, the versio
 | `bun run test`               | Vitest.                                                                                            |
 | `bun run validate`           | All of the above, in order.                                                                        |
 | `bun run classify:changes`   | Summarises added, removed and changed icons between two manifests.                                 |
+| `bun run build:site`         | Builds the icon browser from `site/` into `_site/` (not committed).                                |
 
 To try the package in an app, run `npm pack` after `bun run validate` and install the `.tgz` into a fresh Expo or
 React Native project; check both root imports and `/icons/<Name>` imports.
@@ -86,6 +87,10 @@ Releases are automated; nothing is published by hand.
   GitHub release not marked as latest. Versions are queued oldest first and run one at a time, but GitHub does
   not guarantee matrix jobs run in the order they are queued. Run it manually with `backfill_from` (e.g.
   `16.0.0`) to start earlier.
+- **Website.** [`pages.yml`](.github/workflows/pages.yml) builds the
+  [icon browser](https://thinkhumandotdev.github.io/react-native-simple-icons/) with `bun run build:site` and
+  deploys it to GitHub Pages on every push to `main`. Its layout is adapted from
+  [simpleicons.org](https://github.com/simple-icons/simple-icons-website-rs) (CC0-1.0).
 
 Publishing uses [npm Trusted Publishing](https://docs.npmjs.com/trusted-publishers) (OIDC); there is no
 `NPM_TOKEN` secret. The trusted publisher on npm must match GitHub Actions, `ThinkHumanDotDev/react-native-simple-icons`,
