@@ -1,7 +1,7 @@
 {
-  "simpleIconsVersion": "16.34.0",
+  "simpleIconsVersion": "16.31.0",
   "componentApiHash": "6dc22d1820219f72f2f5a625c1f72349159eff5766d8884714f61688a25df1e7",
-  "count": 3464,
+  "count": 3460,
   "iconNames": [
     "Si1001Tracklists",
     "Si1And1",
@@ -1160,7 +1160,6 @@
     "SiGocd",
     "SiGodaddy",
     "SiGodotengine",
-    "SiGodox",
     "SiGofundme",
     "SiGogdotcom",
     "SiGojek",
@@ -1377,7 +1376,6 @@
     "SiHyper",
     "SiHyperskill",
     "SiHyperx",
-    "SiHypit",
     "SiHypothesis",
     "SiHyprland",
     "SiHyundai",
@@ -2039,7 +2037,6 @@
     "SiNote",
     "SiNotebooklm",
     "SiNotepadplusplus",
-    "SiNotesnook",
     "SiNotion",
     "SiNotist",
     "SiNounproject",
@@ -2900,7 +2897,6 @@
     "SiSui",
     "SiSuitest",
     "SiSumologic",
-    "SiSumup",
     "SiSuno",
     "SiSunrise",
     "SiSupabase",
@@ -10411,12 +10407,6 @@
       "hex": "478CBF",
       "hash": "4bd35d9c4f0f626795732638fbd660f7b6165c7a45294f4e3d944eef53e1aec6"
     },
-    "SiGodox": {
-      "title": "Godox",
-      "slug": "godox",
-      "hex": "FF6600",
-      "hash": "f9b7d3383f1436313faf65ffed111e20a406c04543bccb21ab9e449e81d5ae82"
-    },
     "SiGofundme": {
       "title": "GoFundMe",
       "slug": "gofundme",
@@ -11712,12 +11702,6 @@
       "slug": "hyperx",
       "hex": "E21836",
       "hash": "ccfb291a27136d39dc11eba181b2895769d1e03d15a5f40a86513893fc91c30e"
-    },
-    "SiHypit": {
-      "title": "Hypit",
-      "slug": "hypit",
-      "hex": "DF3C68",
-      "hash": "e0687e3a28e738d419090303d01a749da21b312de2d787389fcd026389c16b35"
     },
     "SiHypothesis": {
       "title": "Hypothesis",
@@ -15684,12 +15668,6 @@
       "slug": "notepadplusplus",
       "hex": "90E59A",
       "hash": "ec547ec85c4787599ad00722070487ec1ac2b68e9198491bc75a4290bca43965"
-    },
-    "SiNotesnook": {
-      "title": "Notesnook",
-      "slug": "notesnook",
-      "hex": "000000",
-      "hash": "32b1ea4181b3bde27c8b11188824064d89255f423be68bc32194fa82052e779f"
     },
     "SiNotion": {
       "title": "Notion",
@@ -20850,12 +20828,6 @@
       "slug": "sumologic",
       "hex": "000099",
       "hash": "6d357d21669068643d374919879b411cab3443e13b62d64738f0a50622144700"
-    },
-    "SiSumup": {
-      "title": "SumUp",
-      "slug": "sumup",
-      "hex": "1E1C1C",
-      "hash": "19f360fd116aafe491d150afbf6450a8eb8b89d5abce90eb05c95641bfb8c528"
     },
     "SiSuno": {
       "title": "Suno",
