@@ -222,6 +222,10 @@
       URL.revokeObjectURL(url);
       save(canvas.toDataURL("image/png"), `${data.slug}.png`);
     });
+    image.addEventListener("error", () => {
+      URL.revokeObjectURL(url);
+      window.alert(`Failed to convert ${data.slug}.svg to PNG.`);
+    });
     image.src = url;
   }
 
