@@ -179,6 +179,7 @@
 
   async function svgText(slug) {
     const response = await fetch(`icons/${slug}.svg`);
+    if (!response.ok) throw new Error(`Failed to load ${slug}.svg (${response.status})`);
     return response.text();
   }
 

@@ -295,6 +295,11 @@ header nav svg {
   outline: none;
 }
 
+.search-box input:focus-visible {
+  outline: 2px solid var(--btn-selected-bg);
+  outline-offset: 1px;
+}
+
 .search-box input::-webkit-search-cancel-button {
   appearance: none;
 }
