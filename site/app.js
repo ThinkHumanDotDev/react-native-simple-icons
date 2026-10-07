@@ -177,10 +177,16 @@
     setTimeout(() => element.classList.remove("copied"), 1000);
   }
 
+  // Resolves to null (after telling the user) when the SVG can't be fetched.
   async function svgText(slug) {
-    const response = await fetch(`icons/${slug}.svg`);
-    if (!response.ok) throw new Error(`Failed to load ${slug}.svg (${response.status})`);
-    return response.text();
+    try {
+      const response = await fetch(`icons/${slug}.svg`);
+      if (!response.ok) throw new Error(`HTTP ${response.status}`);
+      return await response.text();
+    } catch {
+      window.alert(`Failed to load ${slug}.svg.`);
+      return null;
+    }
   }
 
   async function copyFor(kind, data, element) {
@@ -191,7 +197,8 @@
       name: () => data.name,
       usage: () => usage(data.name),
     }[kind];
-    if (text) copyText(await text(), element);
+    const value = text && (await text());
+    if (value != null) copyText(value, element);
   }
 
   // Downloads
@@ -205,6 +212,7 @@
 
   async function downloadSvg(data, colored = false) {
     let svg = await svgText(data.slug);
+    if (svg == null) return;
     if (colored) svg = svg.replace("<path ", `<path fill="#${data.hex}" `);
     const url = URL.createObjectURL(new Blob([svg], { type: "image/svg+xml" }));
     save(url, `${data.slug}${colored ? "-color" : ""}.svg`);
@@ -213,6 +221,7 @@
 
   async function downloadPng(data) {
     const svg = await svgText(data.slug);
+    if (svg == null) return;
     const url = URL.createObjectURL(new Blob([svg], { type: "image/svg+xml" }));
     const image = new Image();
     image.addEventListener("load", () => {
