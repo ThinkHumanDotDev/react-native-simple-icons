@@ -2896,7 +2896,6 @@ export { SiSuckless, SiSucklessHex, SiSucklessSlug, SiSucklessTitle } from "./ic
 export { SiSui, SiSuiHex, SiSuiSlug, SiSuiTitle } from "./icons/SiSui.js";
 export { SiSuitest, SiSuitestHex, SiSuitestSlug, SiSuitestTitle } from "./icons/SiSuitest.js";
 export { SiSumologic, SiSumologicHex, SiSumologicSlug, SiSumologicTitle } from "./icons/SiSumologic.js";
-export { SiSumup, SiSumupHex, SiSumupSlug, SiSumupTitle } from "./icons/SiSumup.js";
 export { SiSuno, SiSunoHex, SiSunoSlug, SiSunoTitle } from "./icons/SiSuno.js";
 export { SiSunrise, SiSunriseHex, SiSunriseSlug, SiSunriseTitle } from "./icons/SiSunrise.js";
 export { SiSupabase, SiSupabaseHex, SiSupabaseSlug, SiSupabaseTitle } from "./icons/SiSupabase.js";

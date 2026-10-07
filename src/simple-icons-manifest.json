@@ -1,7 +1,7 @@
 {
-  "simpleIconsVersion": "16.34.0",
+  "simpleIconsVersion": "16.33.0",
   "componentApiHash": "6dc22d1820219f72f2f5a625c1f72349159eff5766d8884714f61688a25df1e7",
-  "count": 3464,
+  "count": 3463,
   "iconNames": [
     "Si1001Tracklists",
     "Si1And1",
@@ -2900,7 +2900,6 @@
     "SiSui",
     "SiSuitest",
     "SiSumologic",
-    "SiSumup",
     "SiSuno",
     "SiSunrise",
     "SiSupabase",
@@ -20850,12 +20849,6 @@
       "slug": "sumologic",
       "hex": "000099",
       "hash": "6d357d21669068643d374919879b411cab3443e13b62d64738f0a50622144700"
-    },
-    "SiSumup": {
-      "title": "SumUp",
-      "slug": "sumup",
-      "hex": "1E1C1C",
-      "hash": "19f360fd116aafe491d150afbf6450a8eb8b89d5abce90eb05c95641bfb8c528"
     },
     "SiSuno": {
       "title": "Suno",
