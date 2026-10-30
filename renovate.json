@@ -1,0 +1,18 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": ["local>ThinkHumanDotDev/renovate-config", ":semanticCommits"],
+  "prConcurrentLimit": 5,
+  "packageRules": [
+    {
+      "description": "Updated every 3 days by .github/workflows/update-icons.yml, which also regenerates the icons and bumps the package version. A bump alone would fail CI's generate diff check.",
+      "matchPackageNames": ["simple-icons"],
+      "enabled": false
+    },
+    {
+      "matchDatasources": ["npm"],
+      "matchPackageNames": ["react", "react-native", "react-native-svg", "@react-native/**", "@react-native-community/**", "@types/react"],
+      "groupName": "react-native"
+    },
+    { "matchManagers": ["github-actions"], "matchDepTypes": ["action"], "groupName": "actions" }
+  ]
+}
