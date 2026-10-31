@@ -232,6 +232,7 @@ export { SiAsciidoctor, SiAsciidoctorHex, SiAsciidoctorSlug, SiAsciidoctorTitle 
 export { SiAsciinema, SiAsciinemaHex, SiAsciinemaSlug, SiAsciinemaTitle } from "./icons/SiAsciinema.js";
 export { SiAsda, SiAsdaHex, SiAsdaSlug, SiAsdaTitle } from "./icons/SiAsda.js";
 export { SiAseprite, SiAsepriteHex, SiAsepriteSlug, SiAsepriteTitle } from "./icons/SiAseprite.js";
+export { SiAspire, SiAspireHex, SiAspireSlug, SiAspireTitle } from "./icons/SiAspire.js";
 export { SiAssemblyscript, SiAssemblyscriptHex, SiAssemblyscriptSlug, SiAssemblyscriptTitle } from "./icons/SiAssemblyscript.js";
 export { SiAsterisk, SiAsteriskHex, SiAsteriskSlug, SiAsteriskTitle } from "./icons/SiAsterisk.js";
 export { SiAstonmartin, SiAstonmartinHex, SiAstonmartinSlug, SiAstonmartinTitle } from "./icons/SiAstonmartin.js";
@@ -1282,6 +1283,7 @@ export { SiHandm, SiHandmHex, SiHandmSlug, SiHandmTitle } from "./icons/SiHandm.
 export { SiHandshake, SiHandshakeHex, SiHandshakeSlug, SiHandshakeTitle } from "./icons/SiHandshake.js";
 export { SiHandshakeProtocol, SiHandshakeProtocolHex, SiHandshakeProtocolSlug, SiHandshakeProtocolTitle } from "./icons/SiHandshakeProtocol.js";
 export { SiHappycow, SiHappycowHex, SiHappycowSlug, SiHappycowTitle } from "./icons/SiHappycow.js";
+export { SiHaproxy, SiHaproxyHex, SiHaproxySlug, SiHaproxyTitle } from "./icons/SiHaproxy.js";
 export { SiHarbor, SiHarborHex, SiHarborSlug, SiHarborTitle } from "./icons/SiHarbor.js";
 export { SiHarmonyos, SiHarmonyosHex, SiHarmonyosSlug, SiHarmonyosTitle } from "./icons/SiHarmonyos.js";
 export { SiHashcat, SiHashcatHex, SiHashcatSlug, SiHashcatTitle } from "./icons/SiHashcat.js";
@@ -3439,6 +3441,7 @@ export { SiZendesk, SiZendeskHex, SiZendeskSlug, SiZendeskTitle } from "./icons/
 export { SiZenn, SiZennHex, SiZennSlug, SiZennTitle } from "./icons/SiZenn.js";
 export { SiZenodo, SiZenodoHex, SiZenodoSlug, SiZenodoTitle } from "./icons/SiZenodo.js";
 export { SiZensar, SiZensarHex, SiZensarSlug, SiZensarTitle } from "./icons/SiZensar.js";
+export { SiZensical, SiZensicalHex, SiZensicalSlug, SiZensicalTitle } from "./icons/SiZensical.js";
 export { SiZerodha, SiZerodhaHex, SiZerodhaSlug, SiZerodhaTitle } from "./icons/SiZerodha.js";
 export { SiZerotier, SiZerotierHex, SiZerotierSlug, SiZerotierTitle } from "./icons/SiZerotier.js";
 export { SiZettlr, SiZettlrHex, SiZettlrSlug, SiZettlrTitle } from "./icons/SiZettlr.js";
