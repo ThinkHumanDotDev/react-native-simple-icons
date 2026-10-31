@@ -1,7 +1,7 @@
 {
-  "simpleIconsVersion": "16.34.0",
+  "simpleIconsVersion": "16.36.0",
   "componentApiHash": "6dc22d1820219f72f2f5a625c1f72349159eff5766d8884714f61688a25df1e7",
-  "count": 3464,
+  "count": 3467,
   "iconNames": [
     "Si1001Tracklists",
     "Si1And1",
@@ -236,6 +236,7 @@
     "SiAsciinema",
     "SiAsda",
     "SiAseprite",
+    "SiAspire",
     "SiAssemblyscript",
     "SiAsterisk",
     "SiAstonmartin",
@@ -1286,6 +1287,7 @@
     "SiHandshake",
     "SiHandshakeProtocol",
     "SiHappycow",
+    "SiHaproxy",
     "SiHarbor",
     "SiHarmonyos",
     "SiHashcat",
@@ -3443,6 +3445,7 @@
     "SiZenn",
     "SiZenodo",
     "SiZensar",
+    "SiZensical",
     "SiZerodha",
     "SiZerotier",
     "SiZettlr",
@@ -4867,6 +4870,12 @@
       "hex": "7D929E",
       "hash": "2bf1d5d8adfd9ac1e0dc2f58a13affb5cac53486a3e36c58abd94e1707a79f2c"
     },
+    "SiAspire": {
+      "title": "Aspire",
+      "slug": "aspire",
+      "hex": "7455DD",
+      "hash": "c5188b26e5b44bde8758727d0321e977d2502add176fd4ee2809f0cb13f9dc1f"
+    },
     "SiAssemblyscript": {
       "title": "AssemblyScript",
       "slug": "assemblyscript",
@@ -5116,8 +5125,8 @@
     "SiAwait": {
       "title": "Await",
       "slug": "await",
-      "hex": "7858F5",
-      "hash": "80c0a0f409ff57f3680577f95b8ca4c9bfcbbf2660a9b141f8ab25af999e9cfc"
+      "hex": "9973FF",
+      "hash": "3b7ca7224f8910ac88b38cf5c1495adf97aef469c6019eac03f942baa1cab714"
     },
     "SiAwesomelists": {
       "title": "Awesome Lists",
@@ -8752,8 +8761,8 @@
     "SiElixir": {
       "title": "Elixir",
       "slug": "elixir",
-      "hex": "4B275F",
-      "hash": "4ecaf6fc3a7aa0a00accd4956feba46832ef965f255078d68151af12ce1683bb"
+      "hex": "8847B9",
+      "hash": "c5716ff54fda6eba4969fae52378004b62914fa792dc900cbb02b7c037882a6b"
     },
     "SiElk": {
       "title": "Elk",
@@ -11166,6 +11175,12 @@
       "slug": "happycow",
       "hex": "7C4EC4",
       "hash": "3f47845fddb58b01c7fdaa7650db793c0f7aee6e649c38072ad0b0ac8f92cb97"
+    },
+    "SiHaproxy": {
+      "title": "HAProxy",
+      "slug": "haproxy",
+      "hex": "169BD6",
+      "hash": "a5d71a6dd7f6fbf82b9834627e47eea47d26778dd808a4c7b2a59b49e2551bfe"
     },
     "SiHarbor": {
       "title": "Harbor",
@@ -24108,6 +24123,12 @@
       "slug": "zensar",
       "hex": "000000",
       "hash": "0d22e06162c37f1722ecc46eb81f215e6ccf7e34955b548d9b1a9d6b5d9c7eba"
+    },
+    "SiZensical": {
+      "title": "Zensical",
+      "slug": "zensical",
+      "hex": "FFA656",
+      "hash": "94e28ce79dcafadd7eecdb5a8c77a43679e2f69ba82e6d08bf9e48dbd0032cd3"
     },
     "SiZerodha": {
       "title": "Zerodha",
