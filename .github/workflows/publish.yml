@@ -23,9 +23,9 @@ on:
   workflow_dispatch:
     inputs:
       backfill_from:
-        description: "Backfill from this simple-icons version (e.g. 16.0.0). Empty: first version on npm."
+        description: 'Backfill from this simple-icons version (e.g. 16.0.0). Empty: first version on npm.'
         required: false
-        default: ""
+        default: ''
 
 concurrency:
   group: npm-publish
