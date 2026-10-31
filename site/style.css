@@ -6,8 +6,8 @@
   --light-contrast: rgb(238 238 238);
   --sign: #1f6fd1;
   --sign-edge: #1858a8;
-  --font-mono: "Roboto Mono", "DejaVu Sans Mono", Consolas, monospace;
-  --font-sans: "Open Sans", Arial, Helvetica, sans-serif;
+  --font-mono: 'Roboto Mono', 'DejaVu Sans Mono', Consolas, monospace;
+  --font-sans: 'Open Sans', Arial, Helvetica, sans-serif;
 }
 
 .light {
@@ -128,7 +128,7 @@ header {
 
 .sign::before {
   /* Nail */
-  content: "";
+  content: '';
   position: absolute;
   top: 0;
   left: 50%;
@@ -143,7 +143,7 @@ header {
 
 .sign::after {
   /* Strings from the nail down to both top corners of the board */
-  content: "";
+  content: '';
   position: absolute;
   top: 0.3rem;
   left: 14%;
@@ -169,7 +169,7 @@ header {
     0 3px 0 var(--sign-edge),
     0 6px 10px rgb(0 0 0 / 25%);
   color: #fff;
-  font-family: "Kalam", "Comic Sans MS", cursive;
+  font-family: 'Kalam', 'Comic Sans MS', cursive;
   font-size: 1.15rem;
   font-weight: 700;
   line-height: 1.4;
@@ -477,11 +477,11 @@ main {
 }
 
 .links a::before {
-  content: "↗ ";
+  content: '↗ ';
 }
 
 .links a.license::before {
-  content: "⚖ ";
+  content: '⚖ ';
 }
 
 .grid h2 {
@@ -541,7 +541,7 @@ main {
 }
 
 .copy.copied::after {
-  content: "Copied!";
+  content: 'Copied!';
   position: absolute;
   inset: 0;
   display: flex;
