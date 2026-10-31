@@ -71,6 +71,8 @@
     "smoke:react-native": "bun scripts/smoke-react-native.ts",
     "typecheck": "tsc --noEmit",
     "test": "vitest run",
+    "lint": "biome check",
+    "lint:fix": "biome check --write",
     "validate": "bun run generate:icons && bun run typecheck && bun run build && bun run smoke:react-native && bun run test",
     "prepublishOnly": "bun run validate && npm pack --dry-run"
   },
@@ -79,8 +81,10 @@
     "react-native-svg": ">=13"
   },
   "devDependencies": {
+    "@biomejs/biome": "2.6.4",
     "@react-native-community/cli": "^15.0.1",
     "@react-native/metro-config": "0.76.9",
+    "@thinkhuman/biome-config": "github:ThinkHumanDotDev/biome-config#v1.1.0",
     "@types/node": "^20.17.10",
     "@types/react": "^18.3.18",
     "react": "^18.3.1",

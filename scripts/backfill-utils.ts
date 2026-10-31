@@ -1,35 +1,35 @@
 // Release versions only (MAJOR.MINOR.PATCH); simple-icons does not publish prereleases we mirror.
-const releaseVersionPattern = /^(\d+)\.(\d+)\.(\d+)$/;
+const releaseVersionPattern = /^(\d+)\.(\d+)\.(\d+)$/
 
 export function isReleaseVersion(version: string): boolean {
-  return releaseVersionPattern.test(version);
+  return releaseVersionPattern.test(version)
 }
 
 export function compareVersions(a: string, b: string): number {
-  const left = parseVersion(a);
-  const right = parseVersion(b);
+  const left = parseVersion(a)
+  const right = parseVersion(b)
 
   for (let index = 0; index < 3; index += 1) {
-    const difference = left[index] - right[index];
+    const difference = left[index] - right[index]
 
     if (difference !== 0) {
-      return difference;
+      return difference
     }
   }
 
-  return 0;
+  return 0
 }
 
 export type BackfillPlanInput = {
   // Every version of simple-icons on npm.
-  upstreamVersions: string[];
+  upstreamVersions: string[]
   // Every version of this package on npm.
-  publishedVersions: string[];
+  publishedVersions: string[]
   // Version on main; the regular publish job owns it, so it is never backfilled.
-  currentVersion: string;
+  currentVersion: string
   // Lowest version to backfill. Defaults to the first version this package published.
-  from?: string;
-};
+  from?: string
+}
 
 // Upstream release versions in [from, newest of main and npm] that this package has not published,
 // oldest first, so each GitHub release can diff against the one before it.
@@ -39,15 +39,15 @@ export function planBackfill({
   currentVersion,
   from,
 }: BackfillPlanInput): string[] {
-  const published = new Set(publishedVersions);
-  const releasedVersions = publishedVersions.filter(isReleaseVersion).sort(compareVersions);
-  const lowerBound = from ?? releasedVersions[0];
+  const published = new Set(publishedVersions)
+  const releasedVersions = publishedVersions.filter(isReleaseVersion).sort(compareVersions)
+  const lowerBound = from ?? releasedVersions[0]
 
   if (!lowerBound) {
-    return [];
+    return []
   }
 
-  const upperBound = [currentVersion, ...releasedVersions].sort(compareVersions).at(-1) as string;
+  const upperBound = [currentVersion, ...releasedVersions].sort(compareVersions).at(-1) as string
 
   return upstreamVersions
     .filter(isReleaseVersion)
@@ -58,15 +58,15 @@ export function planBackfill({
         version !== currentVersion &&
         !published.has(version),
     )
-    .sort(compareVersions);
+    .sort(compareVersions)
 }
 
 function parseVersion(version: string): [number, number, number] {
-  const match = releaseVersionPattern.exec(version);
+  const match = releaseVersionPattern.exec(version)
 
   if (!match) {
-    throw new Error(`Not a release version: ${version}`);
+    throw new Error(`Not a release version: ${version}`)
   }
 
-  return [Number(match[1]), Number(match[2]), Number(match[3])];
+  return [Number(match[1]), Number(match[2]), Number(match[3])]
 }

@@ -43,6 +43,7 @@ Use Bun (version in `package.json` → `packageManager`) and Node 24, the versio
 | `bun run smoke:react-native` | Bundles the built package in a fresh React Native fixture through Metro, catching export and resolution problems a Node import misses. |
 | `bun run test`               | Vitest.                                                                                            |
 | `bun run validate`           | All of the above, in order.                                                                        |
+| `bun run lint`               | Biome: format, lint and import order (`bun run lint:fix` applies the safe fixes). CI runs it in `lint.yml`. |
 | `bun run classify:changes`   | Summarises added, removed and changed icons between two manifests.                                 |
 | `bun run build:site`         | Builds the icon browser from `site/` into `_site/` (not committed).                                |
 
@@ -60,6 +61,8 @@ React Native project; check both root imports and `/icons/<Name>` imports.
 
 ## Code conventions
 
+- Formatting and linting are Biome, on the org's shared `@thinkhuman/biome-config` (`biome.jsonc` extends it
+  and excludes the generated files). Run `bun run lint:fix` before pushing.
 - TypeScript strict, ESM only. The package must keep working with Metro: `bun run smoke:react-native`
   bundles it in a fresh React Native fixture.
 - Generated files are `src/icons/*`, `src/index.ts` and `src/simple-icons-manifest.json`. Change the

@@ -1,34 +1,29 @@
-import { execFileSync } from "node:child_process";
-import { cp, mkdir, readFile, rm, writeFile } from "node:fs/promises";
-import path from "node:path";
-import { fileURLToPath } from "node:url";
+import { execFileSync } from 'node:child_process'
+import { cp, mkdir, readFile, rm, writeFile } from 'node:fs/promises'
+import path from 'node:path'
+import { fileURLToPath } from 'node:url'
 
-const rootDir = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
-const tmpDir = path.join(rootDir, ".tmp", "react-native-smoke");
-const entryFile = path.join(tmpDir, "App.tsx");
-const bundleFile = path.join(tmpDir, "bundle.js");
-const assetsDir = path.join(tmpDir, "assets");
-const configFile = path.join(tmpDir, "metro.config.cjs");
-const packageDir = path.join(
-  tmpDir,
-  "node_modules",
-  "@thinkhuman",
-  "react-native-simple-icons",
-);
+const rootDir = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..')
+const tmpDir = path.join(rootDir, '.tmp', 'react-native-smoke')
+const entryFile = path.join(tmpDir, 'App.tsx')
+const bundleFile = path.join(tmpDir, 'bundle.js')
+const assetsDir = path.join(tmpDir, 'assets')
+const configFile = path.join(tmpDir, 'metro.config.cjs')
+const packageDir = path.join(tmpDir, 'node_modules', '@thinkhuman', 'react-native-simple-icons')
 
-await rm(tmpDir, { force: true, recursive: true });
-await mkdir(assetsDir, { recursive: true });
-await mkdir(packageDir, { recursive: true });
-await cp(path.join(rootDir, "dist"), path.join(packageDir, "dist"), { recursive: true });
-await mkdir(path.join(packageDir, "src"), { recursive: true });
+await rm(tmpDir, { force: true, recursive: true })
+await mkdir(assetsDir, { recursive: true })
+await mkdir(packageDir, { recursive: true })
+await cp(path.join(rootDir, 'dist'), path.join(packageDir, 'dist'), { recursive: true })
+await mkdir(path.join(packageDir, 'src'), { recursive: true })
 await cp(
-  path.join(rootDir, "src", "simple-icons-manifest.json"),
-  path.join(packageDir, "src", "simple-icons-manifest.json"),
-);
+  path.join(rootDir, 'src', 'simple-icons-manifest.json'),
+  path.join(packageDir, 'src', 'simple-icons-manifest.json'),
+)
 await writeFile(
-  path.join(packageDir, "package.json"),
+  path.join(packageDir, 'package.json'),
   JSON.stringify(smokePackageJson(await readPackageJson()), null, 2),
-);
+)
 await writeFile(
   entryFile,
   `import * as React from "react";
@@ -44,7 +39,7 @@ export default function App() {
   );
 }
 `,
-);
+)
 await writeFile(
   configFile,
   `const path = require("node:path");
@@ -69,48 +64,48 @@ module.exports = mergeConfig(getDefaultConfig(fixture), {
   },
 });
 `,
-);
+)
 
 try {
   execFileSync(
-    "bunx",
+    'bunx',
     [
-      "react-native",
-      "bundle",
-      "--platform",
-      "ios",
-      "--dev",
-      "false",
-      "--entry-file",
+      'react-native',
+      'bundle',
+      '--platform',
+      'ios',
+      '--dev',
+      'false',
+      '--entry-file',
       entryFile,
-      "--config",
+      '--config',
       configFile,
-      "--bundle-output",
+      '--bundle-output',
       bundleFile,
-      "--assets-dest",
+      '--assets-dest',
       assetsDir,
-      "--reset-cache",
-      "--max-workers",
-      "2",
+      '--reset-cache',
+      '--max-workers',
+      '2',
     ],
     {
       cwd: rootDir,
       env: {
         ...process.env,
-        CI: "1",
+        CI: '1',
       },
-      stdio: "inherit",
+      stdio: 'inherit',
     },
-  );
+  )
 } finally {
-  await rm(tmpDir, { force: true, recursive: true });
+  await rm(tmpDir, { force: true, recursive: true })
 }
 
 async function readPackageJson(): Promise<Record<string, unknown>> {
-  return JSON.parse(await readFile(path.join(rootDir, "package.json"), "utf8")) as Record<
+  return JSON.parse(await readFile(path.join(rootDir, 'package.json'), 'utf8')) as Record<
     string,
     unknown
-  >;
+  >
 }
 
 function smokePackageJson(packageJson: Record<string, unknown>): Record<string, unknown> {
@@ -121,9 +116,9 @@ function smokePackageJson(packageJson: Record<string, unknown>): Record<string, 
     main: packageJson.main,
     module: packageJson.module,
     types: packageJson.types,
-    "react-native": packageJson["react-native"],
+    'react-native': packageJson['react-native'],
     exports: packageJson.exports,
     sideEffects: packageJson.sideEffects,
     peerDependencies: packageJson.peerDependencies,
-  };
+  }
 }
