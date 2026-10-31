@@ -1,89 +1,89 @@
-import { createHash } from "node:crypto";
-import { mkdir, readdir, readFile, rm, writeFile } from "node:fs/promises";
-import path from "node:path";
+import { createHash } from 'node:crypto'
+import { mkdir, readdir, readFile, rm, writeFile } from 'node:fs/promises'
+import path from 'node:path'
 
 export type SourceIcon = {
-  title: string;
-  slug?: string;
-  hex?: string;
-  path: string;
-};
+  title: string
+  slug?: string
+  hex?: string
+  path: string
+}
 
 export type IconRecord = {
-  componentName: string;
-  fileName: string;
-  title: string;
-  slug: string;
-  hex: string;
-  path: string;
-  hash: string;
-};
+  componentName: string
+  fileName: string
+  title: string
+  slug: string
+  hex: string
+  path: string
+  hash: string
+}
 
 export type ManifestIcon = {
-  title: string;
-  slug: string;
-  hex: string;
-  hash: string;
-};
+  title: string
+  slug: string
+  hex: string
+  hash: string
+}
 
 export type Manifest = {
-  simpleIconsVersion: string;
-  componentApiHash: string;
-  count: number;
-  iconNames: string[];
-  icons: Record<string, ManifestIcon>;
-};
+  simpleIconsVersion: string
+  componentApiHash: string
+  count: number
+  iconNames: string[]
+  icons: Record<string, ManifestIcon>
+}
 
 const componentApiHash = iconHash({
-  title: "IconProps(size,color,title)",
-  slug: "Svg(width,height,viewBox,accessibilityLabel)",
-  hex: "exports(component,hex,title,slug)",
-  path: "Path(fill,d)",
-});
+  title: 'IconProps(size,color,title)',
+  slug: 'Svg(width,height,viewBox,accessibilityLabel)',
+  hex: 'exports(component,hex,title,slug)',
+  path: 'Path(fill,d)',
+})
 
 export function isIcon(value: unknown): value is SourceIcon {
-  if (!value || typeof value !== "object") {
-    return false;
+  if (!value || typeof value !== 'object') {
+    return false
   }
 
-  const icon = value as Record<string, unknown>;
-  return typeof icon.title === "string" && typeof icon.path === "string";
+  const icon = value as Record<string, unknown>
+  return typeof icon.title === 'string' && typeof icon.path === 'string'
 }
 
 export function toPascalName(value: string): string {
   const normalized = value
-    .normalize("NFKD")
-    .replace(/[\u0300-\u036f]/g, "")
-    .replace(/&/g, " and ")
-    .replace(/\+/g, " plus ")
-    .replace(/#/g, " sharp ")
-    .replace(/@/g, " at ")
-    .replace(/%/g, " percent ");
+    .normalize('NFKD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .replace(/&/g, ' and ')
+    .replace(/\+/g, ' plus ')
+    .replace(/#/g, ' sharp ')
+    .replace(/@/g, ' at ')
+    .replace(/%/g, ' percent ')
 
-  const parts = normalized.match(/[A-Za-z0-9]+/g) ?? [];
-  const words = parts.flatMap((part) => splitWord(part));
-  const name = words.map(capitalize).join("");
+  const parts = normalized.match(/[A-Za-z0-9]+/g) ?? []
+  const words = parts.flatMap((part) => splitWord(part))
+  const name = words.map(capitalize).join('')
 
-  return name || "Icon";
+  return name || 'Icon'
 }
 
-export function componentBaseName(icon: Pick<SourceIcon, "title" | "slug">): string {
-  return `Si${toPascalName(icon.slug || icon.title)}`;
+export function componentBaseName(icon: Pick<SourceIcon, 'title' | 'slug'>): string {
+  return `Si${toPascalName(icon.slug || icon.title)}`
 }
 
 export function makeIconRecords(icons: SourceIcon[]): IconRecord[] {
-  const used = new Map<string, number>();
+  const used = new Map<string, number>()
 
   return [...icons]
     .sort(compareSourceIcons)
     .map((icon) => {
-      const baseName = componentBaseName(icon);
-      const count = used.get(baseName) ?? 0;
-      used.set(baseName, count + 1);
+      const baseName = componentBaseName(icon)
+      const count = used.get(baseName) ?? 0
+      used.set(baseName, count + 1)
 
-      const componentName = count === 0 ? baseName : `${baseName}${count + 1}`;
-      const slug = icon.slug || slugFromTitle(icon.title);
-      const hex = (icon.hex || "000000").replace(/^#/, "").toUpperCase();
+      const componentName = count === 0 ? baseName : `${baseName}${count + 1}`
+      const slug = icon.slug || slugFromTitle(icon.title)
+      const hex = (icon.hex || '000000').replace(/^#/, '').toUpperCase()
 
       return {
         componentName,
@@ -98,9 +98,9 @@ export function makeIconRecords(icons: SourceIcon[]): IconRecord[] {
           hex,
           path: icon.path,
         }),
-      };
+      }
     })
-    .sort((a, b) => a.componentName.localeCompare(b.componentName));
+    .sort((a, b) => a.componentName.localeCompare(b.componentName))
 }
 
 export function makeManifest(records: IconRecord[], simpleIconsVersion: string): Manifest {
@@ -114,7 +114,7 @@ export function makeManifest(records: IconRecord[], simpleIconsVersion: string):
         hash: icon.hash,
       },
     ]),
-  );
+  )
 
   return {
     simpleIconsVersion,
@@ -122,7 +122,7 @@ export function makeManifest(records: IconRecord[], simpleIconsVersion: string):
     count: records.length,
     iconNames: records.map((icon) => icon.componentName),
     icons,
-  };
+  }
 }
 
 export function renderIconFile(icon: IconRecord): string {
@@ -154,7 +154,7 @@ export function ${icon.componentName}({
     </Svg>
   );
 }
-`;
+`
 }
 
 export function renderIndex(records: IconRecord[]): string {
@@ -163,11 +163,11 @@ export function renderIndex(records: IconRecord[]): string {
       (icon) =>
         `export { ${icon.componentName}, ${icon.componentName}Hex, ${icon.componentName}Slug, ${icon.componentName}Title } from "./icons/${icon.componentName}.js";`,
     )
-    .join("\n");
+    .join('\n')
 
   return `export type { IconProps } from "./types.js";
 ${exports}
-`;
+`
 }
 
 export function renderTypes(): string {
@@ -178,74 +178,72 @@ export type IconProps = Omit<SvgProps, "color"> & {
   color?: string | "default";
   title?: string;
 };
-`;
+`
 }
 
 export async function syncPackageVersion(
   rootDir: string,
   simpleIconsVersion: string,
 ): Promise<void> {
-  const packageJsonPath = path.join(rootDir, "package.json");
-  const packageJson = JSON.parse(await readFile(packageJsonPath, "utf8")) as {
-    version?: string;
-    [key: string]: unknown;
-  };
-
-  if (packageJson.version === simpleIconsVersion) {
-    return;
+  const packageJsonPath = path.join(rootDir, 'package.json')
+  const packageJson = JSON.parse(await readFile(packageJsonPath, 'utf8')) as {
+    version?: string
+    [key: string]: unknown
   }
 
-  packageJson.version = simpleIconsVersion;
-  await writeIfChanged(packageJsonPath, `${JSON.stringify(packageJson, null, 2)}\n`);
+  if (packageJson.version === simpleIconsVersion) {
+    return
+  }
+
+  packageJson.version = simpleIconsVersion
+  await writeIfChanged(packageJsonPath, `${JSON.stringify(packageJson, null, 2)}\n`)
 }
 
 export async function writeGeneratedPackage(options: {
-  icons: SourceIcon[];
-  simpleIconsVersion: string;
-  srcDir: string;
-  rootDir: string;
+  icons: SourceIcon[]
+  simpleIconsVersion: string
+  srcDir: string
+  rootDir: string
 }): Promise<Manifest> {
-  const records = makeIconRecords(options.icons);
-  const iconsDir = path.join(options.srcDir, "icons");
+  const records = makeIconRecords(options.icons)
+  const iconsDir = path.join(options.srcDir, 'icons')
 
-  await rm(iconsDir, { force: true, recursive: true });
-  await mkdir(iconsDir, { recursive: true });
+  await rm(iconsDir, { force: true, recursive: true })
+  await mkdir(iconsDir, { recursive: true })
 
   await Promise.all(
-    records.map((icon) =>
-      writeIfChanged(path.join(iconsDir, icon.fileName), renderIconFile(icon)),
-    ),
-  );
+    records.map((icon) => writeIfChanged(path.join(iconsDir, icon.fileName), renderIconFile(icon))),
+  )
 
-  await writeIfChanged(path.join(options.srcDir, "index.ts"), renderIndex(records));
+  await writeIfChanged(path.join(options.srcDir, 'index.ts'), renderIndex(records))
 
-  const typesPath = path.join(options.srcDir, "types.ts");
+  const typesPath = path.join(options.srcDir, 'types.ts')
   try {
-    await readFile(typesPath, "utf8");
+    await readFile(typesPath, 'utf8')
   } catch {
-    await writeIfChanged(typesPath, renderTypes());
+    await writeIfChanged(typesPath, renderTypes())
   }
 
-  const manifest = makeManifest(records, options.simpleIconsVersion);
+  const manifest = makeManifest(records, options.simpleIconsVersion)
   await writeIfChanged(
-    path.join(options.srcDir, "simple-icons-manifest.json"),
+    path.join(options.srcDir, 'simple-icons-manifest.json'),
     `${JSON.stringify(manifest, null, 2)}\n`,
-  );
+  )
 
-  await syncPackageVersion(options.rootDir, options.simpleIconsVersion);
+  await syncPackageVersion(options.rootDir, options.simpleIconsVersion)
 
-  return manifest;
+  return manifest
 }
 
 export async function readDirSnapshot(dir: string): Promise<Record<string, string>> {
-  const files: Record<string, string> = {};
-  await collectFiles(dir, dir, files);
+  const files: Record<string, string> = {}
+  await collectFiles(dir, dir, files)
 
-  return Object.fromEntries(Object.entries(files).sort(([a], [b]) => a.localeCompare(b)));
+  return Object.fromEntries(Object.entries(files).sort(([a], [b]) => a.localeCompare(b)))
 }
 
 function iconHash(icon: { title: string; slug: string; hex: string; path: string }): string {
-  return createHash("sha256")
+  return createHash('sha256')
     .update(
       JSON.stringify({
         title: icon.title,
@@ -254,49 +252,45 @@ function iconHash(icon: { title: string; slug: string; hex: string; path: string
         path: icon.path,
       }),
     )
-    .digest("hex");
+    .digest('hex')
 }
 
 function splitWord(value: string): string[] {
-  return (
-    value.match(/[0-9]+|[A-Z]+(?=[A-Z][a-z]|[0-9]|$)|[A-Z]?[a-z]+|[A-Z]+/g) ?? [
-      value,
-    ]
-  );
+  return value.match(/[0-9]+|[A-Z]+(?=[A-Z][a-z]|[0-9]|$)|[A-Z]?[a-z]+|[A-Z]+/g) ?? [value]
 }
 
 function capitalize(value: string): string {
-  return `${value.slice(0, 1).toUpperCase()}${value.slice(1).toLowerCase()}`;
+  return `${value.slice(0, 1).toUpperCase()}${value.slice(1).toLowerCase()}`
 }
 
 function slugFromTitle(title: string): string {
   return title
-    .normalize("NFKD")
-    .replace(/[\u0300-\u036f]/g, "")
+    .normalize('NFKD')
+    .replace(/[\u0300-\u036f]/g, '')
     .toLowerCase()
-    .replace(/[^a-z0-9]+/g, "-")
-    .replace(/^-+|-+$/g, "");
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-+|-+$/g, '')
 }
 
 function compareSourceIcons(a: SourceIcon, b: SourceIcon): number {
-  return sourceKey(a).localeCompare(sourceKey(b));
+  return sourceKey(a).localeCompare(sourceKey(b))
 }
 
 function sourceKey(icon: SourceIcon): string {
-  return `${icon.slug || ""}\u0000${icon.title}\u0000${icon.path}`;
+  return `${icon.slug || ''}\u0000${icon.title}\u0000${icon.path}`
 }
 
 async function writeIfChanged(filePath: string, next: string): Promise<void> {
   try {
-    const current = await readFile(filePath, "utf8");
+    const current = await readFile(filePath, 'utf8')
     if (current === next) {
-      return;
+      return
     }
   } catch {
-    await mkdir(path.dirname(filePath), { recursive: true });
+    await mkdir(path.dirname(filePath), { recursive: true })
   }
 
-  await writeFile(filePath, next);
+  await writeFile(filePath, next)
 }
 
 async function collectFiles(
@@ -304,19 +298,19 @@ async function collectFiles(
   currentDir: string,
   files: Record<string, string>,
 ): Promise<void> {
-  const entries = await readdir(currentDir, { withFileTypes: true });
+  const entries = await readdir(currentDir, { withFileTypes: true })
 
   for (const entry of entries) {
-    const fullPath = path.join(currentDir, entry.name);
+    const fullPath = path.join(currentDir, entry.name)
 
     if (entry.isDirectory()) {
-      await collectFiles(rootDir, fullPath, files);
-      continue;
+      await collectFiles(rootDir, fullPath, files)
+      continue
     }
 
     if (entry.isFile()) {
-      const relPath = path.relative(rootDir, fullPath).split(path.sep).join("/");
-      files[relPath] = await readFile(fullPath, "utf8");
+      const relPath = path.relative(rootDir, fullPath).split(path.sep).join('/')
+      files[relPath] = await readFile(fullPath, 'utf8')
     }
   }
 }

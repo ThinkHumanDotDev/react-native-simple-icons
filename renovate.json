@@ -10,7 +10,14 @@
     },
     {
       "matchDatasources": ["npm"],
-      "matchPackageNames": ["react", "react-native", "react-native-svg", "@react-native/**", "@react-native-community/**", "@types/react"],
+      "matchPackageNames": [
+        "react",
+        "react-native",
+        "react-native-svg",
+        "@react-native/**",
+        "@react-native-community/**",
+        "@types/react"
+      ],
       "groupName": "react-native"
     },
     { "matchManagers": ["github-actions"], "matchDepTypes": ["action"], "groupName": "actions" }
