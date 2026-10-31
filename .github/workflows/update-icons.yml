@@ -3,7 +3,7 @@ name: Update icons
 # Touch to re-register workflow_dispatch / schedule triggers in GitHub Actions.
 on:
   schedule:
-    - cron: "17 3 */3 * *"
+    - cron: '17 3 */3 * *'
   workflow_dispatch:
 
 permissions:
@@ -57,8 +57,8 @@ jobs:
         with:
           token: ${{ secrets.UPDATE_ICONS_TOKEN || github.token }}
           branch: chore/update-simple-icons
-          commit-message: "chore: update simple-icons to v${{ steps.version.outputs.version }}"
+          commit-message: 'chore: update simple-icons to v${{ steps.version.outputs.version }}'
           delete-branch: true
           labels: dependencies
-          title: "chore: update simple-icons to v${{ steps.version.outputs.version }}"
+          title: 'chore: update simple-icons to v${{ steps.version.outputs.version }}'
           body-path: .github/update-summary.md
