@@ -2,7 +2,7 @@ import * as React from "react";
 import { Path, Svg } from "react-native-svg";
 import type { IconProps } from "../types.js";
 
-export const SiElixirHex = "4B275F";
+export const SiElixirHex = "8847B9";
 export const SiElixirTitle = "Elixir";
 export const SiElixirSlug = "elixir";
 
