@@ -2,7 +2,7 @@ import * as React from "react";
 import { Path, Svg } from "react-native-svg";
 import type { IconProps } from "../types.js";
 
-export const SiAwaitHex = "7858F5";
+export const SiAwaitHex = "9973FF";
 export const SiAwaitTitle = "Await";
 export const SiAwaitSlug = "await";
 
